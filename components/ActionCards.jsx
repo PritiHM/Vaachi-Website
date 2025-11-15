@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ActionCards() {
   const cards = [
     { id: 1, title: "Volunteer", icon: "/images/volunteer.png" },
@@ -7,10 +9,7 @@ export default function ActionCards() {
 
   return (
     <section className="w-full py-12 bg-white my-12">
-
-      {/* FULL WIDTH GRID — NO SIDE MARGIN */}
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-
         {cards.map((card) => (
           <div
             key={card.id}
@@ -23,22 +22,27 @@ export default function ActionCards() {
               hover:shadow-lg hover:-translate-y-1
             "
           >
-            <img
-              src='/images/corner-design1.png'
-              className='absolute top-0 right-0 w-16 opacity-30 pointer-events-none'
+            <Image
+              src="/images/corner-design1.png"
+              alt="corner"
+              width={64}
+              height={64}
+              className="absolute bottom-2 right-2 w-12 h-12 opacity-30 pointer-events-none"
             />
 
-            <img
+            <Image
               src={card.icon}
-              className='w-10 h-10 sm:w-12 sm:h-12 mb-4 object-contain'
+              alt={card.title}
+              width={48}
+              height={48}
+              className="mb-4 object-contain"
             />
 
-            <h3 className='text-base sm:text-lg font-extrabold text-[#00656D]'>
+            <h3 className="text-base sm:text-lg font-extrabold text-[#00656D]">
               {card.title}
             </h3>
           </div>
         ))}
-
       </div>
     </section>
   );
