@@ -5,10 +5,10 @@ export default function WhoWeAre() {
     <section className="w-full bg-white flex justify-center px-4">
       <div
         className="
-          bg-[#00656D] text-white rounded-2xl shadow-lg relative
+          bg-[#00656D] text-white rounded-2xl shadow-lg relative overflow-hidden
           mx-auto max-w-[1250px] w-full my-8
           overflow-visible md:overflow-hidden
-          pt-12
+          pt-20 md:pt-24
         "
       >
         <div className="absolute top-0 right-0 w-20 h-20 pointer-events-none select-none">
