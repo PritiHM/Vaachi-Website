@@ -5,12 +5,12 @@ export default function WhoWeAre() {
     <section className="w-full bg-white flex justify-center px-4">
       <div
         className="
-          bg-[#00656D] text-white rounded-2xl shadow-lg relative overflow-hidden
+          bg-[#00656D] text-white rounded-2xl shadow-lg relative
           mx-auto max-w-[1250px] w-full my-8
+          overflow-visible md:overflow-hidden
+          pt-12
         "
-        
       >
-      
         <div className="absolute top-0 right-0 w-20 h-20 pointer-events-none select-none">
           <Image
             src="/images/corner-design.png"
@@ -21,7 +21,7 @@ export default function WhoWeAre() {
           />
         </div>
 
-        <div className="px-6 md:px-12 pt-8 md:pt-16 pb-36 md:pb-20">
+        <div className="px-6 md:px-12 pt-6 md:pt-12 pb-36 md:pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-6">
             <div>
               <div className="max-w-[320px] w-full">
@@ -59,7 +59,6 @@ export default function WhoWeAre() {
           </div>
         </div>
 
-        
         <div className="md:absolute left-6 right-6 bottom-6 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0">
           <div className="bg-white text-[#00656D] rounded-xl shadow-md w-full md:w-[32%] min-h-[160px] p-6 flex flex-col justify-end">
             <h4 className="font-extrabold text-xl md:text-2xl mb-2">Community Engagement</h4>
