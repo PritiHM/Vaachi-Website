@@ -5,13 +5,12 @@ export default function WhoWeAre() {
     <section className="w-full bg-white flex justify-center px-4">
       <div
         className="
-          bg-[#00656D] text-white rounded-2xl shadow-lg relative overflow-hidden
+          bg-[#00656D] text-white rounded-2xl shadow-lg relative
           mx-auto max-w-[1250px] w-full my-8
+          overflow-visible md:overflow-hidden
         "
-        /* removed fixed width/height and moved to responsive padding */
       >
-        {/* corner design (keeps positioned but smaller on mobile) */}
-        <div className="absolute top-4 right-4 w-20 h-20 pointer-events-none select-none">
+        <div className="absolute top-4 right-4 w-20 h-20 pointer-events-none select-none z-10">
           <Image
             src="/images/corner-design.png"
             alt="corner"
@@ -59,10 +58,6 @@ export default function WhoWeAre() {
           </div>
         </div>
 
-        {/* FIXED BOXES AREA
-            - On small screens they appear stacked (relative flow).
-            - On md+ they become absolute at the bottom and sit in a row.
-        */}
         <div className="md:absolute left-6 right-6 bottom-6 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0">
           <div className="bg-white text-[#00656D] rounded-xl shadow-md w-full md:w-[32%] min-h-[160px] p-6 flex flex-col justify-end">
             <h4 className="font-extrabold text-xl md:text-2xl mb-2">Community Engagement</h4>

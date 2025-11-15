@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ImpactSection() {
   const [activePoint, setActivePoint] = useState(0);
-  const mobileListRef = useRef(null);
+  const mobileCardRef = useRef(null);
 
   const points = [
     {
@@ -25,19 +25,14 @@ export default function ImpactSection() {
   ];
 
   const images = [
-    "/images/impact1.png", // image for point 1
-    "/images/impact2.png", // image for point 2
-    "/images/impact3.png", // image for point 3
+    "/images/impact1.png",
+    "/images/impact2.png",
+    "/images/impact3.png",
   ];
 
-  // when activePoint changes, scroll mobile list so that the active card is centered
+  // optional: scroll mobile card into view (if you want small animation)
   useEffect(() => {
-    const el = mobileListRef.current;
-    if (!el) return;
-    const child = el.children[activePoint];
-    if (child) {
-      child.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-    }
+    mobileCardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
   }, [activePoint]);
 
   return (
@@ -55,7 +50,7 @@ export default function ImpactSection() {
             </p>
           </div>
 
-          {/* Desktop: show points in grid; Mobile: this area is hidden (we show mobile version below) */}
+          {/* Desktop: show points in grid */}
           <div className="hidden lg:block">
             <div className="grid grid-cols-3 gap-6">
               {points.map((p, idx) => (
@@ -83,48 +78,22 @@ export default function ImpactSection() {
           </div>
         </div>
 
-        {/* MOBILE: single-card visible at a time (horizontal snap) */}
-        <div className="lg:hidden mt-8 mb-4 relative">
-          {/* arrows */}
-          <button
-            onClick={() => setActivePoint((p) => Math.max(0, p - 1))}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center"
-            aria-label="Previous"
-          >
-            ‹
-          </button>
-          <button
-            onClick={() => setActivePoint((p) => Math.min(points.length - 1, p + 1))}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center"
-            aria-label="Next"
-          >
-            ›
-          </button>
-
+        {/* MOBILE: single visible card (no scroll, no arrows) */}
+        <div className="lg:hidden mt-8 mb-4">
           <div
-            ref={mobileListRef}
-            className="flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-smooth px-3 py-2"
+            ref={mobileCardRef}
+            className="mx-3 bg-white rounded-lg p-4 shadow-md"
           >
-            {points.map((p, idx) => (
-              <button
-                key={p.id}
-                onClick={() => setActivePoint(idx)}
-                className={`snap-center min-w-[86%] bg-white rounded-lg p-4 shadow-md transition-transform ${
-                  activePoint === idx ? "scale-100" : "scale-95 opacity-75"
-                }`}
-              >
-                <div className="flex items-start gap-3">
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm
-                    ${activePoint === idx ? "bg-[#00656D] text-white" : "bg-pink-50 text-[#9b6a6a]"}`}>
-                    {p.id}
-                  </div>
-                  <div>
-                    <h4 className="text-base font-semibold">{p.title}</h4>
-                    <p className="text-sm text-gray-600 mt-1">{p.desc}</p>
-                  </div>
-                </div>
-              </button>
-            ))}
+            <div className="flex items-start gap-3">
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm
+                ${"bg-[#00656D] text-white"}`}>
+                {points[activePoint].id}
+              </div>
+              <div>
+                <h4 className="text-base font-semibold">{points[activePoint].title}</h4>
+                <p className="text-sm text-gray-600 mt-1">{points[activePoint].desc}</p>
+              </div>
+            </div>
           </div>
         </div>
 
