@@ -15,6 +15,7 @@ export default function Hero() {
 
         <div className="absolute inset-0 bg-black/50" />
 
+        {/* DESKTOP / TABLET: truncated paragraph (shows ellipsis) */}
         <div className="hidden sm:block absolute bottom-16 left-10 right-10 text-white z-10">
           <Image
             src="/images/heading.png"
@@ -25,8 +26,9 @@ export default function Hero() {
           />
 
           <div className="flex items-center justify-between w-full gap-4">
-            <p className="text-lg opacity-90 max-w-[600px]">
-              Vaachi Foundation nurtures the power of performing arts…
+            {/* Add the custom truncate class here */}
+            <p className="text-lg opacity-90 max-w-[600px] truncate-multiline-2">
+              Vaachi Foundation nurtures the power of performing arts to amplify human values, build empathy, and inspire collective harmony.
             </p>
 
             <a
@@ -41,6 +43,7 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* MOBILE: full paragraph under the image (no truncation) */}
       <div className="block sm:hidden px-5 py-8 text-center">
         <Image
           src="/images/heading.png"
@@ -51,7 +54,7 @@ export default function Hero() {
         />
 
         <p className="text-base text-gray-800 mb-6">
-          Vaachi Foundation nurtures the power of performing arts…
+          Vaachi Foundation nurtures the power of performing arts to amplify human values, build empathy, and inspire collective harmony.
         </p>
 
         <a
