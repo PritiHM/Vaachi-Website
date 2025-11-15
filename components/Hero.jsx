@@ -4,9 +4,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div className="w-full">
-
-      {/* IMAGE WRAPPER */}
-      <div className="relative w-full h-[50vh] sm:h-screen overflow-hidden">
+      <div className="relative w-full min-h-[60vh] sm:h-screen">
         <Image
           src="/images/Heroimg.jpg"
           alt="Vaachi Foundation Performance"
@@ -17,9 +15,7 @@ export default function Hero() {
 
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* DESKTOP CONTENT */}
         <div className="hidden sm:block absolute bottom-16 left-10 right-10 text-white z-10">
-
           <Image
             src="/images/heading.png"
             alt="heading"
@@ -28,14 +24,11 @@ export default function Hero() {
             className="mb-6"
           />
 
-          {/* PARAGRAPH LEFT + BUTTON RIGHT */}
-          <div className="flex items-center justify-between w-full">
-            {/* LEFT TEXT */}
+          <div className="flex items-center justify-between w-full gap-4">
             <p className="text-lg opacity-90 max-w-[600px]">
               Vaachi Foundation nurtures the power of performing arts…
             </p>
 
-            {/* RIGHT BUTTON */}
             <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-[#00656D] hover:bg-[#31757a]
@@ -48,7 +41,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* MOBILE CONTENT */}
       <div className="block sm:hidden px-5 py-8 text-center">
         <Image
           src="/images/heading.png"

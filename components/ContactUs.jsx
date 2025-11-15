@@ -4,7 +4,6 @@ export default function ContactUs() {
       id="contact"
       className="relative w-full bg-[#00656D] text-white py-12 overflow-hidden scroll-mt-20 md:scroll-mt-24"
     >
-      {/* CORNER DESIGN */}
       <div className="absolute top-0 right-0 w-20 h-20 opacity-40 pointer-events-none">
         <img
           src="/images/corner-design.png"
@@ -13,9 +12,7 @@ export default function ContactUs() {
         />
       </div>
 
-      {/* MAIN WRAPPER: mobile = column (stack), md = row (two columns) */}
-      <div className="w-full max-w-[1200px] mx-auto flex flex-col md:flex-row items-start justify-between gap-8 px-0">
-        {/* LEFT: start with 2px left padding on its container */}
+      <div className="w-full max-w-[1200px] mx-auto flex flex-col md:flex-row items-start justify-between gap-8 px-5 md:px-0">
         <div className="w-full md:w-6/12 pl-[2px] md:pl-[2px]">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3">
             Get in touch
@@ -26,9 +23,7 @@ export default function ContactUs() {
           </p>
         </div>
 
-        {/* RIGHT: on mobile -> stack under left (column); on desktop -> row aligned to right */}
         <div className="w-full md:w-5/12 flex flex-col md:flex-row md:justify-end justify-start items-center md:items-center gap-6 md:gap-10 px-4 md:px-0">
-          {/* EMAIL */}
           <div className="flex flex-col items-center text-center gap-2">
             <img
               src="/images/envelope.png"
@@ -43,7 +38,6 @@ export default function ContactUs() {
             </a>
           </div>
 
-          {/* PHONE */}
           <div className="flex flex-col items-center text-center gap-2">
             <img
               src="/images/phone.png"
