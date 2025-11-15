@@ -4,7 +4,7 @@ export default function ContactUs() {
       id="contact"
       className="relative w-full bg-[#00656D] text-white py-12 overflow-hidden scroll-mt-20 md:scroll-mt-24"
     >
-      <div className="absolute top-0 right-0 w-20 h-20 opacity-40 pointer-events-none">
+      <div className="absolute top-0 right-0 w-20 h-20 opacity-40 pointer-events-none -translate-x-3 -translate-y-3 sm:translate-x-0 sm:translate-y-0">
         <img
           src="/images/corner-design.png"
           alt="corner design"
@@ -45,10 +45,10 @@ export default function ContactUs() {
               className="w-10 h-10 sm:w-11 sm:h-11 object-contain"
             />
             <a
-              href="tel:+91 9170916622"
+              href="tel:+911234567891"
               className="text-sm sm:text-base md:text-lg hover:underline"
             >
-              +91 1234567891
+              +919170916622
             </a>
           </div>
         </div>
