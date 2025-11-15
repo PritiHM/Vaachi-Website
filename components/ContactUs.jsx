@@ -45,7 +45,7 @@ export default function ContactUs() {
               className="w-10 h-10 sm:w-11 sm:h-11 object-contain"
             />
             <a
-              href="tel:+911234567891"
+              href="tel:+91 9170916622"
               className="text-sm sm:text-base md:text-lg hover:underline"
             >
               +91 1234567891

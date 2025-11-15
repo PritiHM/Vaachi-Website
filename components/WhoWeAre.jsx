@@ -1,88 +1,55 @@
-import Image from "next/image";
-
-export default function WhoWeAre() {
+export default function ContactUs() {
   return (
-    <section className="w-full bg-white flex justify-center px-4">
-      <div
-        className="
-          bg-[#00656D] text-white rounded-2xl shadow-lg relative overflow-hidden
-          mx-auto max-w-[1250px] w-full my-8
-        "
-        /* removed fixed width/height and moved to responsive padding */
-      >
-        {/* corner design (keeps positioned but smaller on mobile) */}
-        <div className="absolute top-4 right-4 w-20 h-20 pointer-events-none select-none">
-          <Image
-            src="/images/corner-design.png"
-            alt="corner"
-            width={80}
-            height={80}
-            className="object-contain"
-          />
+    <section
+      id="contact"
+      className="relative w-full bg-[#00656D] text-white py-12 overflow-hidden scroll-mt-20 md:scroll-mt-24"
+    >
+      <div className="absolute top-0 right-0 w-20 h-20 opacity-40 pointer-events-none -translate-x-3 -translate-y-3 sm:translate-x-0 sm:translate-y-0">
+        <img
+          src="/images/corner-design.png"
+          alt="corner design"
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      <div className="w-full max-w-[1200px] mx-auto flex flex-col md:flex-row items-start justify-between gap-8 px-5 md:px-0">
+        <div className="w-full md:w-6/12 pl-[2px] md:pl-[2px]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3">
+            Get in touch
+          </h2>
+          <p className="text-base sm:text-lg leading-relaxed max-w-lg opacity-90">
+            Every voice matters. Every gesture adds to the harmony.<br />
+            Whether you're an artist, supporter.
+          </p>
         </div>
 
-        <div className="px-6 md:px-12 pt-8 md:pt-16 pb-36 md:pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-6">
-            <div>
-              <div className="max-w-[320px] w-full">
-                <Image
-                  src="/images/who-we-are.png"
-                  alt="Who We Are"
-                  width={320}
-                  height={70}
-                  className="object-contain w-full h-auto"
-                />
-              </div>
-
-              <p className="text-base md:text-lg leading-[1.9] opacity-90 max-w-[600px] mt-6 md:mt-12">
-                Vaachi Foundation is a non-profit dedicated to cultivating
-                human values through the transformative language of performing arts.
-              </p>
-            </div>
-
-            <div>
-              <p className="text-base md:text-lg leading-[1.9] opacity-90 max-w-[600px] mt-6 md:mt-24">
-                We believe that dance, theatre, music, and storytelling have the power to transcend barriers,
-                connecting hearts, shaping perspectives, and nurturing a culture of empathy.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-6 md:mt-8">
-            <Image
-              src="/images/centers-on.png"
-              alt="Centers On"
-              width={560}
-              height={85}
-              className="object-contain w-full max-w-[560px] h-auto"
+        <div className="w-full md:w-5/12 flex flex-col md:flex-row md:justify-end justify-start items-center md:items-center gap-6 md:gap-10 px-4 md:px-0">
+          <div className="flex flex-col items-center text-center gap-2">
+            <img
+              src="/images/envelope.png"
+              alt="email"
+              className="w-10 h-10 sm:w-11 sm:h-11 object-contain"
             />
-          </div>
-        </div>
-
-        {/* FIXED BOXES AREA
-            - On small screens they appear stacked (relative flow).
-            - On md+ they become absolute at the bottom and sit in a row.
-        */}
-        <div className="md:absolute left-6 right-6 bottom-6 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0">
-          <div className="bg-white text-[#00656D] rounded-xl shadow-md w-full md:w-[32%] min-h-[160px] p-6 flex flex-col justify-end">
-            <h4 className="font-extrabold text-xl md:text-2xl mb-2">Community Engagement</h4>
-            <p className="text-sm md:text-lg font-normal leading-relaxed mt-2">
-              Bringing arts to local spaces and schools
-            </p>
+            <a
+              href="mailto:contact@vaachi.org"
+              className="text-sm sm:text-base md:text-lg hover:underline break-words"
+            >
+              contact@vaachi.org
+            </a>
           </div>
 
-          <div className="bg-white text-[#00656D] rounded-xl shadow-md w-full md:w-[32%] min-h-[160px] p-6 flex flex-col justify-end">
-            <h4 className="font-extrabold text-xl md:text-2xl mb-2">Value Amplification</h4>
-            <p className="text-sm md:text-lg leading-relaxed mt-2">
-              Embedding compassion, respect, and harmony through creative expression
-            </p>
-          </div>
-
-          <div className="bg-white text-[#00656D] rounded-xl shadow-md w-full md:w-[32%] min-h-[160px] p-6 flex flex-col justify-end">
-            <h4 className="font-extrabold text-xl md:text-2xl mb-2">Cultural Preservation</h4>
-            <p className="text-sm md:text-lg leading-relaxed mt-2">
-              Honoring traditional forms while embracing contemporary voices
-            </p>
+          <div className="flex flex-col items-center text-center gap-2">
+            <img
+              src="/images/phone.png"
+              alt="phone"
+              className="w-10 h-10 sm:w-11 sm:h-11 object-contain"
+            />
+            <a
+              href="tel:+911234567891"
+              className="text-sm sm:text-base md:text-lg hover:underline"
+            >
+              +91 1234567891
+            </a>
           </div>
         </div>
       </div>
