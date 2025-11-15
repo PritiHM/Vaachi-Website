@@ -10,7 +10,7 @@ export default function WhoWeAre() {
           overflow-visible md:overflow-hidden
         "
       >
-        <div className="absolute top-4 right-4 w-20 h-20 pointer-events-none select-none z-10">
+        <div className="fixed md:absolute top-4 right-4 w-20 h-20 pointer-events-none select-none z-50">
           <Image
             src="/images/corner-design.png"
             alt="corner"

@@ -27,7 +27,7 @@ export default function ActionCards() {
               alt="corner"
               width={64}
               height={64}
-              className="absolute bottom-2 right-2 w-12 h-12 opacity-30 pointer-events-none"
+              className="absolute bottom-0 right-0 w-12 h-12 opacity-30 pointer-events-none"
             />
 
             <Image
