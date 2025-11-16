@@ -65,7 +65,7 @@ export default function WhoWeAre() {
   className="md:absolute left-6 right-6 bottom-6 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0 z-10"
 >
   <div className="bg-white text-[#00656D] rounded-xl shadow-md w-full md:w-[32%]
-                  min-h-[220px] md:min-h-[260px] p-6 md:p-10 flex flex-col justify-end">
+                  min-h-[180px] md:min-h-[200px] p-6 md:p-8 flex flex-col justify-end">
     <h4 className="font-extrabold text-xl md:text-2xl mb-2">Community Engagement</h4>
     <p className="text-sm md:text-lg font-normal leading-relaxed mt-2">
       Bringing arts to local spaces and schools
@@ -73,7 +73,7 @@ export default function WhoWeAre() {
   </div>
 
   <div className="bg-white text-[#00656D] rounded-xl shadow-md w-full md:w-[32%]
-                  min-h-[220px] md:min-h-[260px] p-6 md:p-10 flex flex-col justify-end">
+                  min-h-[180px] md:min-h-[200px] p-6 md:p-8 flex flex-col justify-end">
     <h4 className="font-extrabold text-xl md:text-2xl mb-2">Value Amplification</h4>
     <p className="text-sm md:text-lg leading-relaxed mt-2">
       Embedding compassion, respect, and harmony through creative expression
@@ -81,7 +81,7 @@ export default function WhoWeAre() {
   </div>
 
   <div className="bg-white text-[#00656D] rounded-xl shadow-md w-full md:w-[32%]
-                  min-h-[220px] md:min-h-[260px] p-6 md:p-10 flex flex-col justify-end">
+                  min-h-[180px] md:min-h-[200px] p-6 md:p-8 flex flex-col justify-end">
     <h4 className="font-extrabold text-xl md:text-2xl mb-2">Cultural Preservation</h4>
     <p className="text-sm md:text-lg leading-relaxed mt-2">
       Honoring traditional forms while embracing contemporary voices
