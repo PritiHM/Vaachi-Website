@@ -4,12 +4,11 @@ import Image from "next/image";
 export default function VoiceHero() {
   return (
     <div className="w-full max-w-[1250px] h-auto mt-[20px] mb-[70px] mx-auto">
-      
-      {/* OUTER WRAPPER */}
-      {/* NOTE: overflow-visible so mobile text isn't clipped */}
-      <div className="relative rounded-3xl overflow-visible shadow-lg">
 
-        {/* BACKGROUND IMAGE */}
+      {/* OUTER WRAPPER */}
+      <div className="relative rounded-3xl shadow-lg overflow-visible">
+
+        {/* BACKGROUND IMAGE (rounded + overflow-hidden so image corners stay clean) */}
         <div className="w-full h-[450px] sm:h-[500px] md:h-[650px] lg:h-[750px] relative rounded-3xl overflow-hidden">
           <Image
             src="/images/voice-bg.png"
@@ -20,17 +19,17 @@ export default function VoiceHero() {
           />
 
           {/* DARK OVERLAY */}
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         {/* TEXT BLOCK */}
-        {/* Mobile: appears below image (mt-4). Desktop: absolutely placed over image */}
+        {/* On mobile: flow below the image (mt-4). On md+: absolutely positioned over the image */}
         <div
           className="
             text-white p-6 mt-4
-            md:absolute md:bottom-16 md:left-10
-            md:max-w-[70%] md:mt-0
-            relative z-20
+            md:mt-0 md:absolute md:bottom-16 md:left-10
+            md:max-w-[70%]
+            z-30
           "
         >
           <Image
@@ -41,7 +40,7 @@ export default function VoiceHero() {
             className="mb-4 md:mb-7 w-[250px] sm:w-[300px] md:w-[450px] lg:w-[600px]"
           />
 
-          <p className="text-base sm:text-lg md:text-2xl opacity-90">
+          <p className="text-base sm:text-lg md:text-2xl opacity-95">
             Our initiatives and performances have found resonance in communities
             <br className="hidden md:block" />
             and conversations around art, education, and social change.
