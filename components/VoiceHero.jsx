@@ -6,7 +6,8 @@ export default function VoiceHero() {
     <div className="w-full max-w-[1250px] h-auto mt-[20px] mb-[70px] mx-auto">
 
       {/* OUTER WRAPPER */}
-      <div className="relative rounded-3xl shadow-lg overflow-visible">
+     <div className="relative rounded-none shadow-none md:rounded-3xl md:shadow-lg md:overflow-visible">
+
 
         {/* BACKGROUND IMAGE (kept rounded + overflow-hidden so image corners are clean) */}
         <div className="w-full h-[450px] sm:h-[500px] md:h-[650px] lg:h-[750px] relative rounded-3xl overflow-hidden">
