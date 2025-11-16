@@ -17,7 +17,7 @@ export default function ActionCards() {
               relative  shadow-md rounded-xl
               min-h-[140px] sm:min-h-[160px] md:min-h-[180px]
               flex flex-col justify-center items-center text-center
-              px-5 py-6 border border-gray-50
+              px-5 py-6 
               transition-transform duration-200 ease-in-out
               hover:shadow-lg hover:-translate-y-1
             "
