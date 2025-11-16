@@ -8,7 +8,7 @@ export default function VoiceHero() {
       {/* OUTER WRAPPER */}
       <div className="relative rounded-3xl shadow-lg overflow-visible">
 
-        {/* BACKGROUND IMAGE (rounded + overflow-hidden so image corners stay clean) */}
+        {/* BACKGROUND IMAGE (kept rounded + overflow-hidden so image corners are clean) */}
         <div className="w-full h-[450px] sm:h-[500px] md:h-[650px] lg:h-[750px] relative rounded-3xl overflow-hidden">
           <Image
             src="/images/voice-bg.png"
@@ -18,18 +18,20 @@ export default function VoiceHero() {
             className="object-cover object-center"
           />
 
-          {/* DARK OVERLAY */}
+          {/* DARK OVERLAY (only visual) */}
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
         {/* TEXT BLOCK */}
-        {/* On mobile: flow below the image (mt-4). On md+: absolutely positioned over the image */}
+        {/* mobile: in normal flow below image (mt-4) + dark text; 
+            md+: absolutely placed over image + white text */}
         <div
           className="
-            text-white p-6 mt-4
+            mt-4 p-6
             md:mt-0 md:absolute md:bottom-16 md:left-10
             md:max-w-[70%]
             z-30
+            text-black md:text-white
           "
         >
           <Image
