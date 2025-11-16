@@ -14,7 +14,7 @@ export default function ActionCards() {
           <div
             key={card.id}
             className="
-              relative  shadow-xl rounded-xl
+              relative  shadow-md rounded-xl
               min-h-[140px] sm:min-h-[160px] md:min-h-[180px]
               flex flex-col justify-center items-center text-center
               px-5 py-6 border border-gray-50
