@@ -18,9 +18,6 @@ export default function VoiceHero() {
             className="object-cover object-center"
           />
 
-          {/* DARK OVERLAY (only visual) */}
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
 
        
         <div
@@ -41,7 +38,7 @@ export default function VoiceHero() {
   className="mb-4 w-[250px] sm:w-[300px] md:hidden"
 />
 
-{/* DESKTOP: white-text heading image (visible on md+ only) */}
+
 <Image
   src="/images/voice-world.png"
   alt="heading desktop"
