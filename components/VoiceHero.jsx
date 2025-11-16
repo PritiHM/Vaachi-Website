@@ -6,10 +6,11 @@ export default function VoiceHero() {
     <div className="w-full max-w-[1250px] h-auto mt-[20px] mb-[70px] mx-auto">
       
       {/* OUTER WRAPPER */}
-      <div className="relative rounded-3xl overflow-hidden shadow-lg">
+      {/* NOTE: overflow-visible so mobile text isn't clipped */}
+      <div className="relative rounded-3xl overflow-visible shadow-lg">
 
         {/* BACKGROUND IMAGE */}
-        <div className="w-full h-[450px] sm:h-[500px] md:h-[650px] lg:h-[750px] relative">
+        <div className="w-full h-[450px] sm:h-[500px] md:h-[650px] lg:h-[750px] relative rounded-3xl overflow-hidden">
           <Image
             src="/images/voice-bg.png"
             alt="Vaachi Foundation Performance"
@@ -23,11 +24,13 @@ export default function VoiceHero() {
         </div>
 
         {/* TEXT BLOCK */}
+        {/* Mobile: appears below image (mt-4). Desktop: absolutely placed over image */}
         <div
           className="
-            text-white p-6 
-            md:absolute md:bottom-16 md:left-10   /* Desktop: absolute on image */
-            md:max-w-[70%]
+            text-white p-6 mt-4
+            md:absolute md:bottom-16 md:left-10
+            md:max-w-[70%] md:mt-0
+            relative z-20
           "
         >
           <Image
