@@ -72,7 +72,7 @@ export default function ImpactSection() {
         ))}
       </div>
 
-      {/* MOBILE (ONLY 1 point – ID, Title, Description) */}
+    
       <div className="lg:hidden mb-6 mt-8">
         <div className="flex flex-col items-start gap-3">
 
@@ -91,8 +91,9 @@ export default function ImpactSection() {
         </div>
       </div>
 
-      {/* IMAGE — dots inside bottom center */}
-      <div className="relative w-full h-[480px] md:h-[560px] lg:h-[660px] rounded-2xl overflow-hidden shadow-lg">
+      
+     <div className="relative w-full h-[340px] md:h-[560px] lg:h-[660px] rounded-2xl overflow-hidden shadow-lg mt-4 mb-4 px-2">
+
 
         <Image
           src={current.image}
@@ -103,7 +104,7 @@ export default function ImpactSection() {
 
         <div className="absolute inset-0 bg-black/30" />
 
-        {/* ⭐ ONLY 1 DOTS GROUP — inside image bottom center */}
+       
         <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 z-50">
           {points.map((_, idx) => (
             <button
