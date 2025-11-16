@@ -14,10 +14,10 @@ export default function ActionCards() {
           <div
             key={card.id}
             className="
-              relative bg-white shadow-xl rounded-xl
+              relative  shadow-xl rounded-xl
               min-h-[140px] sm:min-h-[160px] md:min-h-[180px]
               flex flex-col justify-center items-center text-center
-              px-5 py-6 border border-gray-100
+              px-5 py-6 border border-gray-50
               transition-transform duration-200 ease-in-out
               hover:shadow-lg hover:-translate-y-1
             "

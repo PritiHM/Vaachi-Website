@@ -10,7 +10,8 @@ export default function WhoWeAre() {
           /* make overflow visible on all sizes so absolute cards won't be clipped */
           overflow-visible
           /* more bottom padding on md+ so absolute cards have room */
-          pt-20 md:pt-24 pb-36 md:pb-44
+         pt-20 md:pt-24 pb-36 md:pb-52
+
         "
       >
         <div className="absolute top-0 right-0 w-20 h-20 pointer-events-none select-none">
