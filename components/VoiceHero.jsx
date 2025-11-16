@@ -22,9 +22,7 @@ export default function VoiceHero() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
-        {/* TEXT BLOCK */}
-        {/* mobile: in normal flow below image (mt-4) + dark text; 
-            md+: absolutely placed over image + white text */}
+       
         <div
           className="
             mt-4 p-6
@@ -34,13 +32,23 @@ export default function VoiceHero() {
             text-black md:text-white
           "
         >
-          <Image
-            src="/images/voice-world.png"
-            alt="heading"
-            width={300}
-            height={100}
-            className="mb-4 md:mb-7 w-[250px] sm:w-[300px] md:w-[450px] lg:w-[600px]"
-          />
+        
+<Image
+  src="/images/voice-world-black.png"
+  alt="heading mobile"
+  width={300}
+  height={100}
+  className="mb-4 w-[250px] sm:w-[300px] md:hidden"
+/>
+
+{/* DESKTOP: white-text heading image (visible on md+ only) */}
+<Image
+  src="/images/voice-world.png"
+  alt="heading desktop"
+  width={300}
+  height={100}
+  className="mb-4 md:mb-7 w-[250px] sm:w-[300px] md:w-[450px] lg:w-[600px] hidden md:block"
+/>
 
           <p className="text-base sm:text-lg md:text-2xl opacity-95">
             Our initiatives and performances have found resonance in communities
