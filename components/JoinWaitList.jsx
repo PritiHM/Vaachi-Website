@@ -12,7 +12,6 @@ export default function JoinWaitList() {
       id="contact"
       className="w-full max-w-[1250px] mx-auto px-4 md:px-8 bg-[#00656D] text-[#F7F6F1] py-16 mt-10 mb-10 rounded-xl relative overflow-hidden"
     >
-      {/* Corner Image */}
       <div className="pointer-events-none absolute top-0 right-0 -translate-y-3 z-20">
         <img
           src="/images/corner-design.png"
@@ -23,7 +22,6 @@ export default function JoinWaitList() {
 
       <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-10 items-start">
         
-        {/* LEFT SIDE */}
         <div>
           <h2
             className={`${fraunces.className} text-[32px] md:text-[40px] font-extrabold leading-tight mb-4`}
@@ -39,33 +37,29 @@ export default function JoinWaitList() {
           </p>
         </div>
 
-        {/* RIGHT SIDE – MOBILE: 4 ROWS, DESKTOP: 1 ROW */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
 
-          {/* Email Icon */}
           <img
             src="/images/envelope.png"
-            className="w-10 h-10 md:w-12 md:h-12 mx-auto md:mx-0"
+            className="w-10 h-10 md:w-12 md:h-12"
           />
 
-          {/* Email Text */}
           <a
             href="mailto:contact@vaachi.org"
-            className={`${fraunces.className} text-[15px] md:text-[17px] hover:underline text-center md:text-left`}
+            className={`${fraunces.className} text-[15px] md:text-[17px] hover:underline text-left`}
           >
             contact@vaachi.org
           </a>
 
-          {/* Phone Icon */}
           <img
             src="/images/phone.png"
-            className="w-10 h-10 md:w-12 md:h-12 mx-auto md:mx-0"
+            className="w-10 h-10 md:w-12 md:h-12"
           />
 
-          {/* Phone Text */}
+         
           <a
             href="tel:+919170916622"
-            className={`${fraunces.className} text-[15px] md:text-[17px] hover:underline text-center md:text-left`}
+            className={`${fraunces.className} text-[15px] md:text-[17px] hover:underline text-left`}
           >
             +91 91709 16622
           </a>
