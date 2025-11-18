@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/50" />
 
         {/* DESKTOP / TABLET: truncated paragraph (shows ellipsis) */}
-        <div className="hidden sm:block absolute bottom-16 left-10 right-10 text-white z-10">
+        <div className="hidden sm:block absolute bottom-16 left-10 right-10 text-[#F7F6F1] z-10">
           <Image
             src="/images/heading.png"
             alt="heading"

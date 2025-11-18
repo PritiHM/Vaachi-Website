@@ -1,47 +1,117 @@
-﻿export default function Footer() {
+﻿"use client";
+import { Fraunces } from "next/font/google";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+export default function Footer() {
   return (
-    <footer className="w-full bg-white py-6">
-      <div
-        className="
-          w-full
-          px-4 
-          md:px-8
-          flex flex-col gap-6
-          md:grid md:grid-cols-3
-        "
-      >
+    <footer className="w-full bg-white text-[#0f172a]">
+      {/* divider */}
+      <div className="w-full border-t border-gray-200">
+        <div
+          className="
+            w-full max-w-[1250px] mx-auto 
+            px-4 md:px-6 
+            py-8 md:py-10 
+            grid grid-cols-1 md:grid-cols-3 
+            gap-8 items-center
+          "
+        >
 
-        {/* SOCIAL ICONS 
-            MOBILE: 1st (order-1)
-            DESKTOP: 3rd (md:order-3)
-        */}
-        <div className="order-1 md:order-3 w-full flex flex-col items-center md:items-end gap-2">
-          <div className="flex items-center justify-center md:justify-end gap-4 md:gap-5">
-            <img src="/images/Facebook.png" className="h-8 w-8 md:h-10 md:w-10" />
-            <img src="/images/Instagram.png" className="h-8 w-8 md:h-10 md:w-10" />
-            <img src="/images/youtube.png" className="h-8 w-8 md:h-10 md:w-10" />
+          {/* LEFT — Logo + Brand Name */}
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex items-center gap-3 whitespace-nowrap">
+              <img
+                src="/images/Logo.png"
+                alt="Vaachi Foundation logo"
+                className="h-10 w-auto md:h-10"
+              />
+
+              <span
+                className={`${fraunces.className} text-2xl md:text-xl font-bold text-[#00656D]`}
+              >
+                Vaachi Foundation
+              </span>
+            </div>
+
+            <p className="text-sm text-gray-600">
+              All Rights Reserved © 2025
+            </p>
           </div>
-          <span className="text-sm md:text-lg font-serif font-semibold">Follow us on</span>
-        </div>
 
-        {/* PRIVACY
-            MOBILE: 2nd (order-2)
-            DESKTOP: 2nd (md:order-2)
-        */}
-        <div className="order-2 md:order-2 w-full flex flex-col items-center md:items-center gap-2">
-          <a className="text-sm md:text-lg font-serif font-semibold hover:underline">Privacy Policy</a>
-          <a className="text-sm md:text-lg font-serif font-semibold hover:underline">Terms of Use</a>
-        </div>
+          {/* CENTER — Privacy / Terms */}
+          <div className="flex flex-col items-center gap-2">
+            <a
+              href="#"
+              className="text-sm md:text-base hover:underline font-medium"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-sm md:text-base hover:underline font-medium"
+            >
+              Terms of Use
+            </a>
+          </div>
 
-        {/* LOGO 
-            MOBILE: 3rd (order-3)
-            DESKTOP: 1st LEFT (md:order-1)
-        */}
-        <div className="order-3 md:order-1 w-full flex flex-col items-center md:items-start gap-2">
-          <img src="/images/Logo.png" className="h-12 w-auto md:h-10" />
-          <p className="text-sm text-[#00656D]">All Rights Reserved © 2025</p>
-        </div>
+          {/* RIGHT — Social Icons */}
+          <div className="flex flex-col items-center md:items-end gap-2">
+            <div className="flex items-center gap-4 md:gap-5">
 
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <img
+                  src="/images/Facebook.png"
+                  className="h-8 w-8 md:h-9 md:w-9"
+                  alt="Facebook icon"
+                />
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <img
+                  src="/images/Instagram.png"
+                  className="h-8 w-8 md:h-9 md:w-9"
+                  alt="Instagram icon"
+                />
+              </a>
+
+              {/* YouTube */}
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <img
+                  src="/images/youtube.png"
+                  className="h-8 w-8 md:h-9 md:w-9"
+                  alt="YouTube icon"
+                />
+              </a>
+
+            </div>
+
+            <span className="text-sm md:text-base font-medium">
+              Follow us on
+            </span>
+          </div>
+
+        </div>
       </div>
     </footer>
   );
