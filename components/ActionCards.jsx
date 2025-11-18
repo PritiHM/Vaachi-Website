@@ -16,7 +16,7 @@ export default function ActionCards() {
 
   return (
     <section className="w-full bg-white">
-      <div className="w-full max-w-[1250px] mx-auto px-4 md:px-6 py-10">
+      <div className="w-full max-w-7xl mx-auto mt-5 md:mt-10 lg:mt-20">
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {cards.map((card) => (
             <article

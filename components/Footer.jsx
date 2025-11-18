@@ -13,9 +13,10 @@ export default function Footer() {
       <div className="w-full border-t border-gray-200">
         <div
           className="
-            w-full max-w-[1250px] mx-auto 
-            px-4 md:px-6 
-            py-8 md:py-10 
+            w-full max-w-7xl mx-auto 
+           mt-5 md:mt-10 lg:mt-20
+            // px-4 md:px-6 
+            // py-8 md:py-10 
             grid grid-cols-1 md:grid-cols-3 
             gap-8 items-center
           "

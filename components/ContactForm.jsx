@@ -53,8 +53,8 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="w-full bg-white py-20 md:py-24">
-      <div className="w-full max-w-[1250px] mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
+    <section className="w-full bg-white mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
 
        
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">

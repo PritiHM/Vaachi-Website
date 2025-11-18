@@ -10,7 +10,7 @@ export default function JoinWaitList() {
   return (
     <section
       id="contact"
-      className="w-full max-w-[1250px] mx-auto px-4 md:px-8 bg-[#00656D] text-[#F7F6F1] py-16 mt-10 mb-10 rounded-xl relative overflow-hidden"
+      className="w-full max-w-7xl mx-auto px-4 md:px-8 bg-[#00656D] text-[#F7F6F1] py-16 mt-10 mb-10 rounded-xl relative overflow-hidden"
     >
       <div className="pointer-events-none absolute top-0 right-0 -translate-y-3 z-20">
         <img

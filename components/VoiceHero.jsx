@@ -9,8 +9,8 @@ const fraunces = Fraunces({
 
 export default function VoiceHero() {
   return (
-    <section className="w-full bg-white flex justify-center px-4">
-      <div className="w-full max-w-[1250px] mx-auto">
+    <section className="w-full bg-white flex justify-center  mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0">
+      <div className="w-full max-w-7xl mx-auto">
 
         <div className="relative rounded-2xl overflow-hidden mt-[20px] mb-[70px]">
 

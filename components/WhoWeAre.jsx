@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function WhoWeAre() {
   return (
-    <section className="w-full bg-white flex justify-center px-4">
+    <section className="w-full bg-white flex justify-center  mt-5 md:mt-10 lg:mt-20  ">
       <div
         className="
           bg-[#00656D] text-[#F7F6F1] rounded-2xl shadow-lg relative
-          mx-auto max-w-[1250px] w-full my-6
+          mx-auto max-w-7xl w-full
           overflow-visible
-          pt-12 md:pt-16 pb-5 md:pb-56
+          pt-12 md:pt-16 pb-5 md:pb-56  
         "
       >
         <div className="absolute top-0 right-0 w-20 h-20 pointer-events-none select-none">
