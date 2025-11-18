@@ -37,7 +37,7 @@ export default function JoinWaitList() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+<div className="flex flex-col md:flex-row items-start md:items-center gap-6 mt-10 md:mt-12">
 
           <img
             src="/images/envelope.png"

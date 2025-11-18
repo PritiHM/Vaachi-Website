@@ -126,7 +126,6 @@ export default function ContactForm() {
           </form>
         </div>
 
-        {/* POPUP */}
         {showPopup && (
           <div
             ref={overlayRef}
