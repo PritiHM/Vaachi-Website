@@ -23,7 +23,7 @@ export default function JoinWaitList() {
 
       <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-10 items-start">
         
-        {/* Left Side Content */}
+        {/* LEFT SIDE */}
         <div>
           <h2
             className={`${fraunces.className} text-[32px] md:text-[40px] font-extrabold leading-tight mb-4`}
@@ -39,30 +39,36 @@ export default function JoinWaitList() {
           </p>
         </div>
 
-        {/* Contact - Make in 1 Row in Mobile */}
-        <div className="flex flex-row flex-wrap items-center gap-4 md:gap-8">
+        {/* RIGHT SIDE – MOBILE: 4 ROWS, DESKTOP: 1 ROW */}
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
 
-          {/* Email */}
-          <div className="flex flex-row items-center gap-2">
-            <img src="/images/envelope.png" className="w-6 h-6 md:w-12 md:h-12" />
-            <a
-              href="mailto:contact@vaachi.org"
-              className={`${fraunces.className} text-[14px] md:text-[17px] hover:underline`}
-            >
-              contact@vaachi.org
-            </a>
-          </div>
+          {/* Email Icon */}
+          <img
+            src="/images/envelope.png"
+            className="w-10 h-10 md:w-12 md:h-12 mx-auto md:mx-0"
+          />
 
-          {/* Phone */}
-          <div className="flex flex-row items-center gap-2">
-            <img src="/images/phone.png" className="w-6 h-6 md:w-12 md:h-12" />
-            <a
-              href="tel:+919170916622"
-              className={`${fraunces.className} text-[14px] md:text-[17px] hover:underline`}
-            >
-              +91 91709 16622
-            </a>
-          </div>
+          {/* Email Text */}
+          <a
+            href="mailto:contact@vaachi.org"
+            className={`${fraunces.className} text-[15px] md:text-[17px] hover:underline text-center md:text-left`}
+          >
+            contact@vaachi.org
+          </a>
+
+          {/* Phone Icon */}
+          <img
+            src="/images/phone.png"
+            className="w-10 h-10 md:w-12 md:h-12 mx-auto md:mx-0"
+          />
+
+          {/* Phone Text */}
+          <a
+            href="tel:+919170916622"
+            className={`${fraunces.className} text-[15px] md:text-[17px] hover:underline text-center md:text-left`}
+          >
+            +91 91709 16622
+          </a>
 
         </div>
 
