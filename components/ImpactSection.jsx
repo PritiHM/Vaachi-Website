@@ -42,7 +42,7 @@ export default function ImpactSection() {
   }, []);
 
   return (
-    <section className="w-full max-w-7xl mx-auto mt-5 md:mt-10 lg:mt-20">
+    <section className="w-full max-w-7xl mx-auto mt-5 md:mt-10 lg:mt-20 pl-4 md:pl-0">
 
       <h2 className={`${fraunces.className} text-4xl font-semibold text-[#1f2937] mb-3`}>
         How We Create Impact
