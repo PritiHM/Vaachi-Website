@@ -53,10 +53,9 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="w-full bg-white mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0">
+    // add fraunces.className here so the font is loaded for the section (and placeholder)
+    <section className={`${fraunces.className} w-full mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0 mb-5 md:mb-10 lg:mb-20`}>
       <div className="w-full max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
-
-       
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">
           <Image
             src="/images/BePartOfStory.png"
@@ -67,17 +66,12 @@ export default function ContactForm() {
           />
         </div>
 
-        
         <div className="w-full lg:pr-10 order-2 lg:order-1">
-          <h2
-            className={`${fraunces.className} text-3xl sm:text-[32px] md:text-[36px] font-bold text-[#1f2937] mb-6`}
-          >
+          <h2 className="text-3xl sm:text-[32px] md:text-[36px] font-bold text-[#1f2937] mb-6">
             Be Part of the Story
           </h2>
 
-          <p
-            className={`${fraunces.className} text-base sm:text-lg leading-[28px] text-gray-700 mb-10`}
-          >
+          <p className="text-base sm:text-lg leading-[28px] text-gray-700 mb-10">
             Every voice matters. Every gesture adds to the harmony.
             <br />
             Join hands in amplifying values through art.
@@ -90,7 +84,7 @@ export default function ContactForm() {
                 placeholder="Name"
                 value={form.name}
                 onChange={handleChange}
-                className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6] placeholder:text-gray-400
+                className="w-full rounded-lg px-4 py-3  bg-[#f3f4f6] placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
                 focus:outline-none focus:ring-2 focus:ring-[#00656D]"
               />
 
@@ -100,7 +94,7 @@ export default function ContactForm() {
                 placeholder="Email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6] placeholder:text-gray-400
+                className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6] placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
                 focus:outline-none focus:ring-2 focus:ring-[#00656D]"
               />
             </div>
@@ -111,9 +105,17 @@ export default function ContactForm() {
               value={form.phone}
               onChange={handleChange}
               type="tel"
-              className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6] placeholder:text-gray-400
+              className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6] placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
               mb-8 focus:outline-none focus:ring-2 focus:ring-[#00656D]"
             />
+
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows={4}
+              className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6]  placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
+              mb-8 focus:outline-none focus:ring-2 focus:ring-[#00656D]"
+            ></textarea>
 
             <button
               type="submit"
@@ -133,13 +135,9 @@ export default function ContactForm() {
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
           >
             <div className="max-w-sm w-full bg-[#F7F6F1] rounded-2xl shadow-xl p-6 text-center">
-              <h3 className={`${fraunces.className} text-2xl font-bold text-[#00656D]`}>
-                Thank you!
-              </h3>
+              <h3 className="text-2xl font-bold text-[#00656D]">Thank you!</h3>
 
-              <p className={`${fraunces.className} mt-2 text-gray-700`}>
-                You are officially on the waitlist.
-              </p>
+              <p className="mt-2 text-gray-700">You are officially on the waitlist.</p>
 
               <button
                 ref={okButtonRef}
@@ -152,7 +150,6 @@ export default function ContactForm() {
             </div>
           </div>
         )}
-
       </div>
     </section>
   );

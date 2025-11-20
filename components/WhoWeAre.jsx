@@ -1,17 +1,28 @@
 import Image from "next/image";
+import { Fraunces, Nunito } from "next/font/google";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+});
 
 export default function WhoWeAre() {
   return (
-    <section className="w-full bg-white flex justify-center  mt-5 md:mt-10 lg:mt-20  ">
+    <section className="w-full flex justify-center mt-5 md:mt-10 lg:mt-20">
       <div
         className="
           bg-[#00656D] text-[#F7F6F1] rounded-2xl shadow-lg relative
-          mx-auto max-w-7xl w-full
+           max-w-7xl w-full
           overflow-visible
-          pt-12 md:pt-16 pb-5 md:pb-56  
+          pt-2 md:pt-16 pb-8 md:pb-56 mx-6 md:mx-auto
         "
       >
-        <div className="absolute top-0 right-0 w-20 h-20 pointer-events-none select-none">
+        <div className="absolute top-0 right-0 w-20 h-20  hidden md:block pointer-events-none select-none">
           <Image
             src="/images/corner-design.png"
             alt="corner"
@@ -22,85 +33,103 @@ export default function WhoWeAre() {
         </div>
 
         <div className="px-6 md:px-12 pt-4 md:pt-8 pb-6 md:pb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-6">
-            <div>
-              <div className="max-w-[320px] w-full">
-                <Image
-                  src="/images/who-we-are.png"
-                  alt="Who We Are"
-                  width={320}
-                  height={70}
-                  className="object-contain w-full h-auto"
-                />
-              </div>
+          <h2
+            className={`${fraunces.className} text-4xl md:text-6xl font-bold leading-tight tracking-wide`}
+          >
+            Who We Are
+          </h2>
 
-              <p className="text-base md:text-lg leading-[1.9] opacity-90 max-w-[600px] mt-6 md:mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-6 mt-6 md:mt-10">
+            <div>
+              <p
+                className={`${nunito.className} text-base md:text-xl leading-[1.9] opacity-90 max-w-[600px]`}
+              >
                 Vaachi Foundation is a non-profit dedicated to cultivating
-                human values through the transformative language of performing arts.
+                human values through the transformative language of performing
+                arts.
               </p>
             </div>
 
             <div>
-              <p className="text-base md:text-lg leading-[1.9] opacity-90 max-w-[600px] mt-6 md:mt-10">
-                We believe that dance, theatre, music, and storytelling have the power to
-                transcend barriers, connecting hearts, shaping perspectives, and nurturing a culture of empathy.
+              <p
+                className={`${nunito.className} text-base md:text-xl leading-[1.9] opacity-90 max-w-[600px]`}
+              >
+                We believe that dance, theatre, music, and storytelling have the
+                power to transcend barriers, connecting hearts, shaping
+                perspectives, and nurturing a culture of empathy.
               </p>
             </div>
           </div>
 
-          <div className="mt-8 md:mt-12">
-            <Image
-              src="/images/centers-on.png"
-              alt="Centers On"
-              width={560}
-              height={85}
-              className="object-contain w-full max-w-[560px] h-auto"
-            />
-          </div>
+          <h3
+            className={`${fraunces.className} font-bold text-2xl md:text-4xl mt-8 md:mt-16`}
+          >
+            At Vaachi, our work centers on:
+          </h3>
         </div>
 
-        <div className="md:absolute left-6 right-6 bottom-8 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0 z-10 items-start justify-start">
+        {/* 3 Boxes */}
+        <div className="md:absolute inset-x-6 bottom-8 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0 z-10 items-start md:items-stretch md:justify-between">
+          {/* Box 1 */}
           <div
             className="
               bg-[#F7F6F1] text-[#00656D] rounded-xl shadow-md
-              w-full md:w-[360px] h-[190px]
-              p-5 md:p-7 flex flex-col justify-start
+              w-full md:flex-1 
+              h-[160px] md:h-[220px]
+               p-5 md:p-7 flex flex-col justify-start
             "
           >
-            <h4 className="font-fraunces font-extrabold text-lg md:text-xl mb-1 md:mb-2 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+            <h4
+              className={`${fraunces.className} font-bold text-base md:text-2xl mb-1 md:mb-2 leading-tight`}
+            >
               Community Engagement
             </h4>
-            <p className="text-sm md:text-base font-normal leading-relaxed mt-2">
-              Bringing arts to local spaces and<br /> schools
+            <p
+              className={`${nunito.className} text-base md:text-2xl font-normal leading-relaxed mt-6`}
+            >
+              Bringing arts to local spaces and schools
             </p>
           </div>
 
+          {/* Box 2 */}
           <div
             className="
               bg-[#F7F6F1] text-[#00656D] rounded-xl shadow-md
-              w-full md:w-[360px] h-[190px]
+              w-full md:flex-1 
+              h-[160px] md:h-[220px]
               p-5 md:p-7 flex flex-col justify-start
             "
           >
-            <h4 className="font-fraunces font-extrabold text-lg md:text-xl mb-1 md:mb-2 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+            <h4
+              className={`${fraunces.className} font-bold text-base md:text-2xl mb-1 md:mb-2 leading-tight`}
+            >
               Value Amplification
             </h4>
-            <p className="text-sm md:text-base leading-relaxed mt-2">
-              Embedding compassion, respect, and harmony through creative expression
+            <p
+              className={`${nunito.className} text-base md:text-2xl font-normal leading-relaxed mt-6`}
+            >
+              Embedding compassion, respect, and harmony through creative
+              expression
             </p>
           </div>
 
+          {/* Box 3 */}
           <div
             className="
               bg-[#F7F6F1] text-[#00656D] rounded-xl shadow-md
-              w-full md:w-[360px] h-[190px]
+              w-full md:flex-1 
+              h-[160px] md:h-[220px]
               p-5 md:p-7 flex flex-col justify-start
             "
           >
-            <h4 className="font-fraunces font-extrabold text-lg md:text-xl mb-1 md:mb-2 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+            <h4
+              className={`${fraunces.className} font-bold text-base md:text-2xl mb-1 md:mb-2 leading-tight`}
+            >
               Cultural Preservation
             </h4>
-            <p className="text-sm md:text-base leading-relaxed mt-2">
+            <p
+              className={`${nunito.className} text-base md:text-2xl font-normal leading-relaxed mt-6`}
+            >
               Honoring traditional forms while embracing contemporary voices
             </p>
           </div>

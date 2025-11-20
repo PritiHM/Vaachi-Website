@@ -9,18 +9,20 @@ const fraunces = Fraunces({
 
 export default function VoiceHero() {
   return (
-    <section className="w-full bg-white flex justify-center  mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0">
-      <div className="w-full max-w-7xl mx-auto">
+    <section className="w-full flex justify-center mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0">
+      <div className="w-full max-w-7xl   mx-auto">
 
-        <div className="relative rounded-2xl overflow-hidden mt-[20px] mb-[70px]">
+        <div className="relative rounded-2xl overflow-hidden mt-[20px] ">
 
-          <div className="
-            relative w-full
-            h-[450px]          
-            sm:h-[500px]
-            md:h-[650px]      
-            lg:h-[750px]      
-          ">
+          <div
+            className="
+              relative w-full
+              h-[300px]
+              sm:h-[400px]
+              md:h-[650px]
+              lg:h-[750px]
+            "
+          >
             <Image
               src="/images/voice-bg.png"
               alt="Vaachi Foundation Performance"
@@ -37,31 +39,43 @@ export default function VoiceHero() {
               md:mt-0 md:absolute md:bottom-16 md:left-10
               md:max-w-[70%]
               z-30
-              text-black md:text-[#F7F6F1]
+              text-[#291F1E] md:text-[#F7F6F1]
             "
           >
-            <div className="mb-4 md:hidden">
-              <Image
-                src="/images/voice-world-black.png"
-                alt="heading mobile"
-                width={300}
-                height={100}
-                className="w-[250px] sm:w-[300px] object-contain"
-              />
-            </div>
 
-            
-            <div className="hidden md:block mb-7">
-              <Image
-                src="/images/voice-world.png"
-                alt="heading desktop"
-                width={600}
-                height={140}
-                className="w-[450px] lg:w-[600px] object-contain"
-              />
-            </div>
+           
+            <h2
+              className={`
+                ${fraunces.className}
+                md:hidden
+                text-2xl
+                font-bold leading-tight tracking-wide
+                mb-4
+              `}
+            >
+              Our Voice in the World
+            </h2>
 
-            <p className={`${fraunces.className} text-base sm:text-lg md:text-2xl leading-relaxed`}>
+            <h2
+              className={`
+                ${fraunces.className}
+                hidden md:block
+                text-4xl lg:text-5xl
+                font-bold leading-tight tracking-wide
+                mb-7
+                text-[#F7F6F1]
+              `}
+            >
+              Our Voice in the World
+            </h2>
+
+            <p
+              className={`
+                ${fraunces.className}
+                text-base sm:text-lg md:text-2xl
+                leading-relaxed
+              `}
+            >
               Our initiatives and performances have found resonance in communities
               <br className="hidden md:block" />
               and conversations around art, education, and social change.

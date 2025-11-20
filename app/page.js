@@ -6,10 +6,9 @@ import ContactForm from "@/components/ContactForm";
 import JoinWaitList from "@/components/JoinWaitList";
 import ActionCards from "@/components/ActionCards";
 
-
 export default function Home() {
   return (
-    <>
+    <div className="bg-[#F7F6F1]">
       <Hero />
       <WhoWeAre />
       <VoiceHero />
@@ -17,6 +16,6 @@ export default function Home() {
       <ContactForm />
       <JoinWaitList />
       <ActionCards />
-    </>
+    </div>
   );
 }
