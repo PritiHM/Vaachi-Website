@@ -19,7 +19,7 @@ export default function WhoWeAre() {
           bg-[#00656D] text-[#F7F6F1] rounded-2xl shadow-lg relative
            max-w-7xl w-full
           overflow-visible
-          pt-2 md:pt-5 pb-8 md:pb-56 mx-6 md:mx-auto
+          pt-2 md:pt-16 pb-8 md:pb-56 mx-6 md:mx-auto
         "
       >
         <div className="absolute top-0 right-0 w-20 h-20  hidden md:block pointer-events-none select-none">

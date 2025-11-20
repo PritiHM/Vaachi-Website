@@ -72,7 +72,7 @@ export default function Footer() {
               />
 
               <span
-                className={`${fraunces.className} text-2xl md:text-4xl font-bold text-[#00656D]`}
+                className={` text-2xl md:text-4xl font-bold text-[#00656D]`}
               >
                 Vaachi Foundation
               </span>
