@@ -11,7 +11,6 @@ export default function Hero() {
   return (
     <div className="w-full">
       <div className="relative w-full min-h-[60vh] sm:h-screen">
-        
         <Image
           src="/images/Heroimg.jpg"
           alt="Vaachi Foundation Performance"
@@ -22,7 +21,6 @@ export default function Hero() {
 
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* DESKTOP HEADING (hidden on mobile) */}
         <div className="absolute bottom-16 left-6 sm:left-10 right-6 sm:right-10 hidden sm:block z-10">
           <h2
             className={`
@@ -35,7 +33,7 @@ export default function Hero() {
 
           <div className="mt-6 flex items-center justify-between w-full gap-4 text-white">
             <p className="text-lg opacity-90 max-w-[600px]">
-              Vaachi Foundation nurtures the power of performing arts to amplify human values,
+              Vaachi Foundation nurtures the power of performing arts,
               build empathy, and inspire collective harmony.
             </p>
 
@@ -52,19 +50,19 @@ export default function Hero() {
       </div>
 
       <div className="block sm:hidden px-5 py-8 text-center">
+        <p className="text-base text-gray-800 mb-4">
+          Vaachi Foundation nurtures the power of performing arts to amplify
+          human values, build empathy, and inspire collective harmony.
+        </p>
+
         <h2
           className={`
             ${fraunces.className}
-            text-3xl font-bold text-black mb-4
+            text-base font-bold text-[#291F1E] mb-6
           `}
         >
           Where Art Speaks. Values Resonate.
         </h2>
-
-        <p className="text-base text-gray-800 mb-6">
-          Vaachi Foundation nurtures the power of performing arts to amplify human values,
-          build empathy, and inspire collective harmony.
-        </p>
 
         <a
           href="#contact"
