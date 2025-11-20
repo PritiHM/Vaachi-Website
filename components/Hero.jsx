@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <div className="w-full">
       <div className="relative w-full min-h-[60vh] sm:h-screen">
-        
+        {/* Background image */}
         <Image
           src="/images/Heroimg.jpg"
           alt="Vaachi Foundation Performance"
@@ -20,24 +20,24 @@ export default function Hero() {
           className="object-cover object-center"
         />
 
-       
+        {/* Single overlay */}
         <div className="absolute inset-0 bg-black/50" />
 
-       
-        <div className="absolute bottom-16 left-6 sm:left-10 right-6 sm:right-10 z-10">
+        {/* ABSOLUTE HEADING: show only on sm and larger (hidden on mobile) */}
+        <div className="absolute bottom-16 left-6 sm:left-10 right-6 sm:right-10 z-10 hidden sm:block">
           <h2
             className={`
               ${fraunces.className}
               text-2xl sm:text-4xl font-bold leading-tight
-              text-[#291F1E] sm:text-[#ffffff]
+              text-white
             `}
           >
             Where Art Speaks. Values Resonate.
           </h2>
 
-         
-          <div className="hidden sm:flex items-center justify-between w-full gap-4 mt-6 text-white">
-            <p className="text-lg opacity-90 max-w-[600px] truncate-multiline-2">
+          {/* Desktop content (only shown on sm+) */}
+          <div className="mt-6 flex items-center justify-between w-full gap-4 text-white">
+            <p className="text-lg opacity-90 max-w-[600px]">
               Vaachi Foundation nurtures the power of performing arts to amplify human values, 
               build empathy, and inspire collective harmony.
             </p>
@@ -54,6 +54,7 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* MOBILE: full paragraph under the image (no overlay text inside image) */}
       <div className="block sm:hidden px-5 py-8 text-center">
         <h2
           className={`
