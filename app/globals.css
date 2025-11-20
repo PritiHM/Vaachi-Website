@@ -45,3 +45,7 @@ html { scroll-behavior: smooth; }
 .placeholder-fraunces::placeholder {
   font-family: var(--fraunces-font), sans-serif;
 }
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;              
+}
