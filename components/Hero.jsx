@@ -1,10 +1,17 @@
 "use client";
 import Image from "next/image";
+import { Fraunces } from "next/font/google";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export default function Hero() {
   return (
     <div className="w-full">
       <div className="relative w-full min-h-[60vh] sm:h-screen">
+        
         <Image
           src="/images/Heroimg.jpg"
           alt="Vaachi Foundation Performance"
@@ -13,22 +20,26 @@ export default function Hero() {
           className="object-cover object-center"
         />
 
+       
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* DESKTOP / TABLET: truncated paragraph (shows ellipsis) */}
-        <div className="hidden sm:block absolute bottom-16 left-10 right-10 text-[#F7F6F1] z-10">
-          <Image
-            src="/images/heading.png"
-            alt="heading"
-            width={600}
-            height={200}
-            className="mb-6"
-          />
+       
+        <div className="absolute bottom-16 left-6 sm:left-10 right-6 sm:right-10 z-10">
+          <h2
+            className={`
+              ${fraunces.className}
+              text-2xl sm:text-4xl font-bold leading-tight
+              text-[#291F1E] sm:text-[#ffffff]
+            `}
+          >
+            Where Art Speaks. Values Resonate.
+          </h2>
 
-          <div className="flex items-center justify-between w-full gap-4">
-            {/* Add the custom truncate class here */}
+         
+          <div className="hidden sm:flex items-center justify-between w-full gap-4 mt-6 text-white">
             <p className="text-lg opacity-90 max-w-[600px] truncate-multiline-2">
-              Vaachi Foundation nurtures the power of performing arts to amplify human values, build empathy, and inspire collective harmony.
+              Vaachi Foundation nurtures the power of performing arts to amplify human values, 
+              build empathy, and inspire collective harmony.
             </p>
 
             <a
@@ -43,18 +54,19 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* MOBILE: full paragraph under the image (no truncation) */}
       <div className="block sm:hidden px-5 py-8 text-center">
-        <Image
-          src="/images/heading.png"
-          alt="heading"
-          width={320}
-          height={120}
-          className="mx-auto mb-4"
-        />
+        <h2
+          className={`
+            ${fraunces.className}
+            text-3xl font-bold text-black mb-4
+          `}
+        >
+          Where Art Speaks. Values Resonate.
+        </h2>
 
         <p className="text-base text-gray-800 mb-6">
-          Vaachi Foundation nurtures the power of performing arts to amplify human values, build empathy, and inspire collective harmony.
+          Vaachi Foundation nurtures the power of performing arts to amplify human values, 
+          build empathy, and inspire collective harmony.
         </p>
 
         <a
