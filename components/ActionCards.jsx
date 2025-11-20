@@ -16,7 +16,7 @@ export default function ActionCards() {
 
   return (
     <section className="w-full">
-  <div className="w-full max-w-7xl mx-auto mt-5 md:mt-10 lg:mt-20 pb-10 lg:pb-20 px-4 sm:px-0">
+  <div className="w-full max-w-7xl mx-auto mt-5 md:mt-10 lg:mt-20 pb-5 lg:pb-10 px-4 sm:px-0">
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
 
           {cards.map((card) => (
