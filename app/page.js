@@ -5,6 +5,7 @@ import ImpactSection from "@/components/ImpactSection";
 import ContactForm from "@/components/ContactForm";
 import JoinWaitList from "@/components/JoinWaitList";
 import ActionCards from "@/components/ActionCards";
+import BrandStrip from "@/components/BrandStrip";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <WhoWeAre />
       <VoiceHero />
+      <BrandStrip />
       <ImpactSection />
       <ContactForm />
       <JoinWaitList />

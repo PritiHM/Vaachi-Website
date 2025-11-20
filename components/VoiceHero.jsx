@@ -10,10 +10,8 @@ const fraunces = Fraunces({
 export default function VoiceHero() {
   return (
     <section className="w-full flex justify-center mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0">
-      <div className="w-full max-w-7xl   mx-auto">
-
-        <div className="relative rounded-2xl overflow-hidden mt-[20px] ">
-
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="relative rounded-2xl overflow-hidden mt-[20px]">
           <div
             className="
               relative w-full
@@ -39,11 +37,11 @@ export default function VoiceHero() {
               md:mt-0 md:absolute md:bottom-16 md:left-10
               md:max-w-[70%]
               z-30
+              text-left                
+              md:text-left           
               text-[#291F1E] md:text-[#F7F6F1]
             "
           >
-
-           
             <h2
               className={`
                 ${fraunces.className}
@@ -51,6 +49,7 @@ export default function VoiceHero() {
                 text-2xl
                 font-bold leading-tight tracking-wide
                 mb-4
+                text-left               
               `}
             >
               Our Voice in the World
@@ -64,6 +63,7 @@ export default function VoiceHero() {
                 font-bold leading-tight tracking-wide
                 mb-7
                 text-[#F7F6F1]
+                text-left                
               `}
             >
               Our Voice in the World
@@ -74,6 +74,7 @@ export default function VoiceHero() {
                 ${fraunces.className}
                 text-base sm:text-lg md:text-2xl
                 leading-relaxed
+                text-left               
               `}
             >
               Our initiatives and performances have found resonance in communities

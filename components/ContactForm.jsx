@@ -9,14 +9,15 @@ const fraunces = Fraunces({
 });
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [showPopup, setShowPopup] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const overlayRef = useRef(null);
   const okButtonRef = useRef(null);
 
   function handleChange(e) {
-    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setForm((s) => ({ ...s, [name]: value }));
   }
 
   async function handleSubmit(e) {
@@ -28,9 +29,10 @@ export default function ContactForm() {
 
     setSubmitting(true);
     try {
+      // simulate request
       await new Promise((r) => setTimeout(r, 600));
       setShowPopup(true);
-      setForm({ name: "", email: "", phone: "" });
+      setForm({ name: "", email: "", phone: "", message: "" });
     } finally {
       setSubmitting(false);
     }
@@ -53,79 +55,101 @@ export default function ContactForm() {
   }
 
   return (
-    // add fraunces.className here so the font is loaded for the section (and placeholder)
-    <section className={`${fraunces.className} w-full mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0 mb-5 md:mb-10 lg:mb-20`}>
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
+    <section
+      className={`${fraunces.className} w-full mt-32 md:mt-10 lg:mt-20 sm:px-0 mb-4 md:mb-10 lg:mb-20`}
+    >
+      <div className="w-full max-w-7xl mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">
+          <Image
+            src="/images/BePartOfStory2.png"
+            alt="Contact Illustration Mobile"
+            width={400}
+            height={400}
+            className="w-full object-contain block sm:hidden"
+          />
+
           <Image
             src="/images/BePartOfStory.png"
             alt="Contact Illustration"
             width={500}
             height={500}
-            className="object-contain w-full max-w-[450px]"
+            className="object-contain w-full max-w-[450px] hidden sm:block"
           />
         </div>
 
         <div className="w-full lg:pr-10 order-2 lg:order-1">
-          <h2 className="text-3xl sm:text-[32px] md:text-[36px] font-bold text-[#1f2937] mb-6">
+          <h2 className="text-3xl sm:text-[32px] md:text-[36px] font-bold text-[#1f2937] mb-6  px-5">
             Be Part of the Story
           </h2>
 
-          <p className="text-base sm:text-lg leading-[28px] text-gray-700 mb-10">
+          <p className="text-base sm:text-lg leading-[28px] text-gray-700 mb-10  px-5">
             Every voice matters. Every gesture adds to the harmony.
             <br />
             Join hands in amplifying values through art.
           </p>
 
-          <form onSubmit={handleSubmit} className="w-full mt-3" aria-label="Contact form">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <input
-                name="name"
-                placeholder="Name"
-                value={form.name}
-                onChange={handleChange}
-                className="w-full rounded-lg px-4 py-3  bg-[#f3f4f6] placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
-                focus:outline-none focus:ring-2 focus:ring-[#00656D]"
-              />
+          <form
+            onSubmit={handleSubmit}
+            className="w-full px-4 md:px-0 mt-3"
+            aria-label="Contact form"
+          >
+            <div className="flex flex-col gap-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  name="name"
+                  placeholder="Name"
+                  value={form.name}
+                  onChange={handleChange}
+                  className="w-full rounded-lg px-4 py-4 bg-[#ffffff] md:bg-[#333333]/10
+                    placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
+                    focus:outline-none focus:ring-2 focus:ring-[#00656D]"
+                />
+
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  value={form.email}
+                  onChange={handleChange}
+                  className="w-full rounded-lg px-4 py-4 bg-[#ffffff] md:bg-[#333333]/10
+                    placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
+                    focus:outline-none focus:ring-2 focus:ring-[#00656D]"
+                />
+              </div>
 
               <input
-                name="email"
-                type="email"
-                placeholder="Email"
-                value={form.email}
+                name="phone"
+                placeholder="Phone Number"
+                value={form.phone}
                 onChange={handleChange}
-                className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6] placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
-                focus:outline-none focus:ring-2 focus:ring-[#00656D]"
+                type="tel"
+                className="w-full rounded-lg px-4 py-4 bg-[#ffffff] md:bg-[#333333]/10
+                  placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
+                  focus:outline-none focus:ring-2 focus:ring-[#00656D]"
+              />
+
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows={4}
+                value={form.message}
+                onChange={handleChange}
+                className="w-full rounded-lg px-4 py-4 bg-[#ffffff] md:bg-[#333333]/10
+                  placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
+                  focus:outline-none focus:ring-2 focus:ring-[#00656D]"
               />
             </div>
-
-            <input
-              name="phone"
-              placeholder="Phone Number"
-              value={form.phone}
-              onChange={handleChange}
-              type="tel"
-              className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6] placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
-              mb-8 focus:outline-none focus:ring-2 focus:ring-[#00656D]"
-            />
-
-            <textarea
-              name="message"
-              placeholder="Message"
-              rows={4}
-              className="w-full rounded-lg px-4 py-3 bg-[#f3f4f6]  placeholder:text-xl placeholder:text-[#000000] placeholder-fraunces
-              mb-8 focus:outline-none focus:ring-2 focus:ring-[#00656D]"
-            ></textarea>
 
             <button
               type="submit"
               disabled={submitting}
               className="w-full sm:w-[180px] bg-[#00656D] hover:bg-[#005a58] text-[#F7F6F1]
-              px-6 py-3 rounded-md transition disabled:opacity-60 text-[16px] font-semibold"
+                px-6 py-3 rounded-md transition disabled:opacity-60 text-[16px] font-semibold"
             >
               {submitting ? "Please wait..." : "Submit"}
             </button>
           </form>
+          
         </div>
 
         {showPopup && (
@@ -143,7 +167,7 @@ export default function ContactForm() {
                 ref={okButtonRef}
                 onClick={() => setShowPopup(false)}
                 className="mt-5 px-5 py-2 rounded-md bg-[#00656D] text-[#F7F6F1]
-                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00656D]"
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00656D]"
               >
                 OK
               </button>

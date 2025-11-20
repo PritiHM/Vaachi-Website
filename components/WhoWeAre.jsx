@@ -13,13 +13,14 @@ const nunito = Nunito({
 
 export default function WhoWeAre() {
   return (
-    <section className="w-full flex justify-center mt-5 md:mt-10 lg:mt-20">
+    <section className="w-full flex justify-center mt-5 md:mt-10 lg:mt-20 py-20 bg-[#F7F6F1]">
       <div
         className="
           bg-[#00656D] text-[#F7F6F1] rounded-2xl shadow-lg relative
            max-w-7xl w-full
           overflow-visible
-          pt-2 md:pt-16 pb-8 md:pb-56 mx-6 md:mx-auto
+           pt-2 pb-4 px-2
+          md:pt-16 md:pb-56 mx-6 md:mx-auto
         "
       >
         <div className="absolute top-0 right-0 w-20 h-20  hidden md:block pointer-events-none select-none">
@@ -68,9 +69,8 @@ export default function WhoWeAre() {
           </h3>
         </div>
 
-        {/* 3 Boxes */}
-        <div className="md:absolute inset-x-6 bottom-8 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0 z-10 items-start md:items-stretch md:justify-between">
-          {/* Box 1 */}
+        <div className="md:absolute inset-x-6 bottom-8 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0 z-10 items-center md:items-stretch md:justify-between">
+          
           <div
             className="
               bg-[#F7F6F1] text-[#00656D] rounded-xl shadow-md
@@ -113,7 +113,6 @@ export default function WhoWeAre() {
             </p>
           </div>
 
-          {/* Box 3 */}
           <div
             className="
               bg-[#F7F6F1] text-[#00656D] rounded-xl shadow-md

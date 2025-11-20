@@ -29,22 +29,17 @@ export default function ActionCards() {
              hover:shadow-lg hover:-translate-y-1"
   aria-labelledby={`card-${card.id}-title`}
 >
-  <div className="absolute bottom-0 right-0 opacity-20 pointer-events-none -translate-y-1">
-    <Image
-      src="/images/corner-design1.png"
-      alt=""
-      width={56}
-      height={56}
-      className="object-contain"
-    />
-  </div>
+ <div className="absolute bottom-0 right-0 opacity-20 pointer-events-none translate-y-0">
+  <Image src="/images/corner-design1.png" alt="" width={56} height={56} className="object-contain" />
+</div>
+
 
   <div className="mb-4">
     <Image
       src={card.icon}
       alt={card.title}
-      width={56}
-      height={56}
+      width={32}
+      height={32}
       className="object-contain"
     />
   </div>

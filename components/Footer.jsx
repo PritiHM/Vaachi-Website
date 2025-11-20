@@ -68,11 +68,11 @@ export default function Footer() {
               <img
                 src="/images/Logo.png"
                 alt="Vaachi Foundation logo"
-                className="h-8 w-auto md:h-10"
+                className="h-10 w-auto md:h-12"
               />
 
               <span
-                className={` text-2xl md:text-4xl font-bold text-[#00656D]`}
+                className={` text-2xl md:text-3xl font-bold text-[#00656D]`}
               >
                 Vaachi Foundation
               </span>
