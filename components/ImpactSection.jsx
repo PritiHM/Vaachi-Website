@@ -52,11 +52,11 @@ export default function ImpactSection() {
 
   return (
     <>
-      <div className="w-full mx-0 px-0">
+      <div className=" section w-full mx-0 px-0">
         <BrandStrip logos={logos} speed={60} />
       </div>
 
-      <section className="w-full max-w-7xl mx-auto mt-8 md:mt-10 lg:mt-20 px-4 md:px-0">
+      <section className="w-full max-w-7xl mx-auto  pt-8 md:pt-12 px-4 md:px-0">
        
         <h2 className={`${fraunces.className} text-3xl font-semibold text-[#1f2937] mb-3`}>
           How We Create Impact
@@ -76,7 +76,7 @@ export default function ImpactSection() {
               <div className="flex flex-col items-start">
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm ${
-                    activePoint === idx ? "bg-[#00656D] text-white" : "bg-[#333333]/10 text-[#333333]"
+                    activePoint === idx ? "bg-[#00656D] text-white" : "bg-[#ffffff] text-[#333333]"
                   }`}
                 >
                   {p.id}
@@ -84,7 +84,7 @@ export default function ImpactSection() {
 
                 <h3
                   className={`${fraunces.className} mt-3 text-[24px] leading-[36px] font-bold ${
-                    activePoint === idx ? "text-[#00656D]" : "text-[#333333]"
+                    activePoint === idx ? "text-[#00656D]" : "text-[#333333]/70"
                   }`}
                 >
                   {p.title}
@@ -100,7 +100,7 @@ export default function ImpactSection() {
 
         <div className="lg:hidden mb-6 mt-8">
           <div className="flex flex-col items-start gap-3">
-            <div className="w-10 h-10 bg-[#00656D] rounded-full text-white flex items-center justify-center font-semibold">
+            <div className="w-10 h-10 bg-[#00656D] rounded-full text-[#FFFFFF] flex items-center justify-center font-semibold">
               {current.id}
             </div>
 
@@ -114,7 +114,6 @@ export default function ImpactSection() {
           </div>
         </div>
 
-        {/* ===== image slider / hero area ===== */}
         <div className="relative w-full h-[340px] md:h-[560px] lg:h-[660px] rounded-2xl overflow-hidden shadow-lg mt-4 mb-8">
           <Image src={current.image} alt={current.title} fill className="object-cover" />
           <div className="absolute inset-0 bg-black/30" />
@@ -130,7 +129,7 @@ export default function ImpactSection() {
                 {activePoint === idx ? (
                   <span className="w-3 h-3 rounded-full bg-[#00656D] block" />
                 ) : (
-                  <span className="w-3 h-3 rounded-full border-2 border-[#00656D]/50 block" />
+                  <span className="w-3 h-3 rounded-full bg-[#F7F6F1] block" />
                 )}
               </button>
             ))}

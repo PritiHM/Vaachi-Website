@@ -13,7 +13,7 @@ const nunito = Nunito({
 
 export default function WhoWeAre() {
   return (
-<section className="w-full flex justify-center mt-5 md:mt-10 lg:mt-20 py-6 md:py-12 bg-[#F7F6F1]">
+<section className="section pt-0 md:pt-14 w-full flex justify-center bg-[#F7F6F1]">
       <div
         className="
           bg-[#00656D] text-[#F7F6F1] rounded-2xl shadow-lg relative
@@ -33,7 +33,7 @@ export default function WhoWeAre() {
           />
         </div>
 
-        <div className="px-6 md:px-12 pt-4 md:pt-8 pb-6 md:pb-12">
+        <div className="px-6 md:px-12 pt-4 md:pt-0 pb-6 md:pb-12">
           <h2
             className={`${fraunces.className} text-4xl md:text-6xl font-bold leading-tight tracking-wide`}
           >
@@ -63,7 +63,7 @@ export default function WhoWeAre() {
           </div>
 
           <h3
-            className={`${fraunces.className} font-bold text-2xl md:text-4xl mt-8 md:mt-16`}
+            className={`${fraunces.className} font-bold text-2xl md:text-4xl mt-8 md:mt-16 md:mb-6`}
           >
             At Vaachi, our work centers on:
           </h3>

@@ -49,3 +49,13 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;              
 }
+@layer components {
+  .section {
+    @apply py-10;   /* Mobile gap = 3rem */
+  }
+  @screen md {
+    .section {
+      @apply py-16;  /* Tablet/Desktop gap = 5rem */
+    }
+  }
+}

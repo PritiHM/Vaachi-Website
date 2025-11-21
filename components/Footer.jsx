@@ -7,7 +7,7 @@ const fraunces = Fraunces({
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#F7F6F1] text-[#0f172a]">
+    <footer className="  w-full bg-[#F7F6F1] text-[#0f172a]">
       
       <div className="w-full border-t border-mt-5 border-gray-200">
         <div

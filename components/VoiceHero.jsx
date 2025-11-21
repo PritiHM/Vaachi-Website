@@ -9,27 +9,30 @@ const fraunces = Fraunces({
 
 export default function VoiceHero() {
   return (
-    <section className="w-full flex justify-center mt-5 md:mt-10 lg:mt-20 px-4 sm:px-0">
+<section className="section  pb-0 md:pb:0 pt-12 w-full flex justify-center px-4 sm:px-0">
       <div className="w-full max-w-7xl mx-auto">
         <div className="relative rounded-2xl overflow-hidden mt-[20px]">
-          <div
-            className="
-              relative w-full
-              h-[300px]
-              sm:h-[400px]
-              md:h-[650px]
-              lg:h-[750px]
-            "
-          >
-            <Image
-              src="/images/voice-bg.png"
-              alt="Vaachi Foundation Performance"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 1250px"
-              className="object-cover object-center"
-            />
-          </div>
+  <div
+    className="
+      relative w-full
+      h-[300px]
+      sm:h-[400px]
+      md:h-[650px]
+      lg:h-[750px]
+      overflow-hidden           
+      rounded-2xl               
+    "
+  >
+    <Image
+      src="/images/voice-bg.png"
+      alt="Vaachi Foundation Performance"
+      fill
+      priority
+      sizes="(max-width: 768px) 100vw, 1250px"
+      className="object-cover object-center"
+    />
+  </div>
+
 
           <div
             className="

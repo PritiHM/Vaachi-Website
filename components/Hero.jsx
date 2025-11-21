@@ -9,7 +9,7 @@ const fraunces = Fraunces({
 
 export default function Hero() {
   return (
-    <div className="w-full">
+    <div className=" section pt-0 md:pt:0 w-full">
       <div className="relative w-full min-h-[60vh] sm:h-screen">
         <Image
           src="/images/Heroimg.jpg"
