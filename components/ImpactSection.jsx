@@ -52,14 +52,10 @@ export default function ImpactSection() {
 
   return (
     <>
-      {/* Brand strip stays outside the bordered block */}
       <BrandStrip logos={logos} speed={60} />
 
-      {/* Wrapper: border only on md+; full width so border edges align with viewport */}
       <div className="w-full md:border md:border-black md:rounded-xl md:overflow-hidden">
 
-        {/* Inner section — centered content with its own padding.
-            Keep the section classes as you had, adjusted to reduce extra gap. */}
         <section className="section pt-6 md:pt-10 pb-6 md:pb-10 w-full max-w-7xl mx-auto px-4 md:px-0">
           <h2 className={`${fraunces.className} text-4xl font-semibold text-[#291F1E] mb-3`}>
             How We Create Impact

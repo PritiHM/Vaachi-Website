@@ -64,7 +64,6 @@ export default function ContactForm() {
     >
       <div className="w-full max-w-7xl mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
         
-        {/* IMAGE SIDE */}
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">
           <Image
             src="/images/BePartOfStory2.png"
@@ -82,7 +81,6 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* FORM SIDE */}
         <div className="w-full lg:pr-10 order-2 lg:order-1">
           <h2 className="text-3xl sm:text-[32px] md:text-[36px] font-bold text-[#1f2937] mb-6 px-5">
             Be Part of the Story
@@ -94,7 +92,6 @@ export default function ContactForm() {
             Join hands in amplifying values through art.
           </p>
 
-          {/* FORM */}
           <form
             onSubmit={handleSubmit}
             className="w-full px-4 md:px-0 mt-3"
@@ -103,7 +100,6 @@ export default function ContactForm() {
             <div className="flex flex-col gap-6 mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                {/* NAME */}
                 <input
                   name="name"
                   placeholder="Name"
@@ -118,7 +114,7 @@ export default function ContactForm() {
                   "
                 />
 
-                {/* EMAIL */}
+                
                 <input
                   name="email"
                   type="email"
@@ -135,7 +131,6 @@ export default function ContactForm() {
                 />
               </div>
 
-              {/* PHONE */}
               <input
                 name="phone"
                 placeholder="Phone Number"
@@ -151,7 +146,6 @@ export default function ContactForm() {
                 "
               />
 
-              {/* MESSAGE */}
               <textarea
                 name="message"
                 placeholder="Message"
@@ -168,7 +162,6 @@ export default function ContactForm() {
               />
             </div>
 
-            {/* SUBMIT BUTTON */}
             <button
               type="submit"
               disabled={submitting}
@@ -183,7 +176,7 @@ export default function ContactForm() {
           </form>
         </div>
 
-        {/* POPUP */}
+        
         {showPopup && (
           <div
             ref={overlayRef}

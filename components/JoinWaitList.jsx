@@ -12,7 +12,6 @@ export default function JoinWaitList() {
       id="contact"
       className="w-full max-w-7xl mx-auto px-4 md:px-8 bg-[#00656D] text-[#F7F6F1] py-16 mt-10 mb-10 rounded-xl relative overflow-hidden"
     >
-      {/* Corner Design */}
       <div className="pointer-events-none absolute top-0 right-0 -translate-y-3 z-20">
         <img
           src="/images/corner-design.png"
@@ -23,7 +22,6 @@ export default function JoinWaitList() {
 
       <div className="grid grid-cols-1 md:grid-cols-[50%_50%] gap-10 items-start">
         
-        {/* Left Text */}
         <div>
           <h2
             className={`${fraunces.className} text-[24px] md:text-[32px] font-bold  leading-tight mb-4`}
@@ -38,13 +36,10 @@ export default function JoinWaitList() {
           </p>
         </div>
 
-        {/* RIGHT ICON+TEXT BLOCK */}
         <section className="mt-10 md:mt-12 w-full md:-translate-x-10">
 
-          {/* DESKTOP */}
           <div className="hidden md:grid grid-cols-2 gap-x-6 gap-y-1 text-center">
 
-            {/* Icons row */}
             <div className="flex justify-center">
               <img src="/images/envelope.png" className="w-12 h-12" />
             </div>
@@ -53,7 +48,6 @@ export default function JoinWaitList() {
               <img src="/images/phone.png" className="w-12 h-12" />
             </div>
 
-            {/* Text row */}
             <div className="mt-1">
               <a
                 href="mailto:contact@vaachi.org"
@@ -74,10 +68,8 @@ export default function JoinWaitList() {
 
           </div>
 
-        {/* MOBILE (only mobile changed) */}
 <div className="md:hidden flex flex-col items-start gap-8">
 
-  {/* Email */}
   <div className="flex flex-col items-start gap-2">
     <img src="/images/envelope.png" className="w-10 h-10" />
     <a
@@ -88,7 +80,6 @@ export default function JoinWaitList() {
     </a>
   </div>
 
-  {/* Phone */}
   <div className="flex flex-col items-start gap-2">
     <img src="/images/phone.png" className="w-10 h-10" />
     <a

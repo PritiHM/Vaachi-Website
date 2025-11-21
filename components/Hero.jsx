@@ -21,7 +21,6 @@ export default function Hero() {
 
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* Desktop overlay */}
         <div className="absolute bottom-16 left-6 sm:left-10 right-6 sm:right-10 hidden sm:block z-30">
           <h2
             className={`
@@ -55,7 +54,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile block */}
       <div className="block sm:hidden px-5 py-8 text-left">
         <h2
           className={`

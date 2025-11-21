@@ -20,7 +20,6 @@ export default function Footer() {
           "
         >
 
-          {/* 1️⃣ Mobile: Logo | Desktop: Logo + Rights */}
           <div className="flex flex-col items-center md:items-start gap-2 order-1 md:order-1">
             <div className="flex items-center gap-3 whitespace-nowrap">
               <img
@@ -31,7 +30,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 2️⃣ Mobile: Social Icons | Desktop: Social Icons */}
           <div className="flex flex-col items-center md:items-end gap-2 order-2 md:order-3">
             <div className="flex items-center gap-4 md:gap-5">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -62,7 +60,6 @@ export default function Footer() {
             <span className="text-sm md:text-base font-bold">Follow us on</span>
           </div>
 
-          {/* 3️⃣ Mobile: Privacy/Terms | Desktop: Center */}
           <div className="flex flex-col items-center gap-2 order-3 md:order-2">
             <a href="#" className="text-sm md:text-base hover:underline font-bold">
               Privacy Policy
@@ -72,12 +69,10 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* 4️⃣ Mobile LAST — All rights reserved | Desktop under logo */}
           <div className="flex justify-center md:hidden order-4">
             <p className="text-sm text-gray-600 mt-2">All Rights Reserved © 2025</p>
           </div>
 
-          {/* Desktop: rights under logo (not last) */}
           <div className="hidden md:flex md:items-start order-1">
             <p className="text-xl text-gray-600">All Rights Reserved © 2025</p>
           </div>

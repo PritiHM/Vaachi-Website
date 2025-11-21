@@ -91,7 +91,6 @@ export default function WhoWeAre() {
             </p>
           </div>
 
-          {/* Box 2 */}
           <div
             className="
               bg-[#F7F6F1] text-[#00656D] rounded-xl shadow-md
