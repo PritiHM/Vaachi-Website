@@ -7,9 +7,8 @@ const fraunces = Fraunces({
 
 export default function Footer() {
   return (
-    <footer className="  w-full bg-[#F7F6F1] text-[#0f172a]">
-      
-      <div className="w-full border-t border-mt-5 border-gray-200">
+    <footer className="w-full bg-[#F7F6F1] text-[#0f172a]">
+      <div className="w-full border-t border-gray-200">
         <div
           className="
             w-full max-w-7xl mx-auto 
@@ -21,8 +20,19 @@ export default function Footer() {
           "
         >
 
-         
-          <div className="flex flex-col items-center md:items-end gap-2 order-1 md:order-3">
+          {/* 1️⃣ Mobile: Logo | Desktop: Logo + Rights */}
+          <div className="flex flex-col items-center md:items-start gap-2 order-1 md:order-1">
+            <div className="flex items-center gap-3 whitespace-nowrap">
+              <img
+                src="/images/Logo 1 (1).png"
+                alt="Vaachi Foundation logo"
+                className="h-10 w-auto md:h-12"
+              />
+            </div>
+          </div>
+
+          {/* 2️⃣ Mobile: Social Icons | Desktop: Social Icons */}
+          <div className="flex flex-col items-center md:items-end gap-2 order-2 md:order-3">
             <div className="flex items-center gap-4 md:gap-5">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                 <img
@@ -52,8 +62,8 @@ export default function Footer() {
             <span className="text-sm md:text-base font-bold">Follow us on</span>
           </div>
 
-          
-          <div className="flex flex-col items-center gap-2 order-2 md:order-2">
+          {/* 3️⃣ Mobile: Privacy/Terms | Desktop: Center */}
+          <div className="flex flex-col items-center gap-2 order-3 md:order-2">
             <a href="#" className="text-sm md:text-base hover:underline font-bold">
               Privacy Policy
             </a>
@@ -62,25 +72,14 @@ export default function Footer() {
             </a>
           </div>
 
-          
-          <div className="flex flex-col items-center md:items-start gap-2 order-3 md:order-1">
-            <div className="flex items-center gap-3 whitespace-nowrap">
-              <img
-                src="/images/Logo.png"
-                alt="Vaachi Foundation logo"
-                className="h-10 w-auto md:h-12"
-              />
+          {/* 4️⃣ Mobile LAST — All rights reserved | Desktop under logo */}
+          <div className="flex justify-center md:hidden order-4">
+            <p className="text-sm text-gray-600 mt-2">All Rights Reserved © 2025</p>
+          </div>
 
-              <span
-                className={` text-2xl md:text-3xl font-bold text-[#00656D]`}
-              >
-                Vaachi Foundation
-              </span>
-            </div>
-
-            <p className="text-sm md:text-xl text-gray-600">
-              All Rights Reserved © 2025
-            </p>
+          {/* Desktop: rights under logo (not last) */}
+          <div className="hidden md:flex md:items-start order-1">
+            <p className="text-xl text-gray-600">All Rights Reserved © 2025</p>
           </div>
 
         </div>
