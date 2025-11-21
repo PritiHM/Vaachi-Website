@@ -146,7 +146,7 @@ export default function BrandStrip({ logos = [], speed = 60 }) {
   return (
 <div className="section pt-6 md:pt-0 pb-0 md:pb-20 w-full">
       <ScrollRow logos={row1} speed={speed} reverse={false} />
-      <div className="py-10 " />
+      <div className="py-6 md:py-10 " />
       <ScrollRow logos={row2} speed={speed} reverse={true} />
 
 

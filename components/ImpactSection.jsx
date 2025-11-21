@@ -54,10 +54,9 @@ export default function ImpactSection() {
     <>
       <BrandStrip logos={logos} speed={60} />
 
-      <div className="w-full md:border md:border-black md:rounded-xl md:overflow-hidden">
 
-        <section className="section pt-6 md:pt-10 pb-6 md:pb-10 w-full max-w-7xl mx-auto px-4 md:px-0">
-          <h2 className={`${fraunces.className} text-4xl font-semibold text-[#291F1E] mb-3`}>
+<section className="section pt-6 md:pt-10 pb-6 md:pb-10 w-full max-w-7xl mx-auto px-10 md:px-auto ">
+          <h2 className={`${fraunces.className} text-2xl md:text-4xl font-bold text-[#291F1E] mb-3`}>
             How We Create Impact
           </h2>
 
@@ -80,18 +79,22 @@ export default function ImpactSection() {
                   >
                     {p.id}
                   </div>
+<h3
+  className={`${fraunces.className} mt-3 text-[24px] leading-[36px] font-bold ${
+    activePoint === idx ? "text-[#00656D]" : "text-[#333333]/70"
+  }`}
+>
+  {p.title}
+</h3>
 
-                  <h3
-                    className={`${fraunces.className} mt-3 text-[24px] leading-[36px] font-bold ${
-                      activePoint === idx ? "text-[#00656D]" : "text-[#333333]/70"
-                    }`}
-                  >
-                    {p.title}
-                  </h3>
+<p
+  className={`${fraunces.className} text-[16px] leading-[24px] mt-1 max-w-[340px] ${
+    activePoint === idx ? "text-[#00656D]" : "text-[#333333]/70"
+  }`}
+>
+  {p.desc}
+</p>
 
-                  <p className={`${fraunces.className} text-[16px] leading-[24px] text-[#333333]/70 mt-1 max-w-[340px]`}>
-                    {p.desc}
-                  </p>
                 </div>
               </button>
             ))}
@@ -103,13 +106,14 @@ export default function ImpactSection() {
                 {current.id}
               </div>
 
-              <h3 className={`${fraunces.className} text-[24px] leading-[32px] font-bold text-[#00656D]`}>
-                {current.title}
-              </h3>
+             <h3 className={`${fraunces.className} text-[24px] leading-[32px] font-bold text-[#00656D]`}>
+  {current.title}
+</h3>
 
-              <p className={`${fraunces.className} text-[16px] leading-[24px] text-[#333333]/70`}>
-                {current.desc}
-              </p>
+<p className={`${fraunces.className} text-[16px] leading-[24px] text-[#00656D]`}>
+  {current.desc}
+</p>
+
             </div>
           </div>
 
@@ -135,7 +139,7 @@ export default function ImpactSection() {
             </div>
           </div>
         </section>
-      </div>
+      
     </>
   );
 }
