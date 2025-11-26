@@ -11,7 +11,7 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex gap-6 items-center">
-          <a href="#contact" className="font-bold text-lg sm:text-xl text-[#00656D] transition hover:underline">JoinWaitList</a>
+          <a href="#contact" className="font-bold text-lg sm:text-xl text-[#00656D] transition hover:underline">Join WaitList</a>
         </nav>
 
         <div className="md:hidden">
