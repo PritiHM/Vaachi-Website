@@ -28,7 +28,7 @@ export default function ContactForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.phone.trim()) {
-      alert("Please fill all fields.");
+      alert("Please fill all required fields.");
       return;
     }
 
@@ -60,11 +60,10 @@ export default function ContactForm() {
 
   return (
     <section
-    id="contact"
+      id="contact"
       className={`section ${fraunces.className} w-full mt-32 md:mt-10 lg:mt-20 sm:px-0 mb-4 md:mb-10 lg:mb-20`}
     >
       <div className="w-full max-w-7xl mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
-        
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">
           <Image
             src="/images/BePartOfStory2.png"
@@ -100,67 +99,108 @@ export default function ContactForm() {
           >
             <div className="flex flex-col gap-6 mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block mb-2 font-medium text-gray-700"
+                  >
+                    Name <span className="text-red-500" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                    aria-required="true"
+                    className="
+                      w-full rounded-lg px-4 py-4 
+                      bg-[#ffffff] 
+                      placeholder:text-base placeholder:text-[#6b7280]
+                      focus:outline-none focus:ring-2 focus:ring-[#00656D]
+                      border border-black/50
+                    "
+                  />
+                </div>
 
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block mb-2 font-medium text-gray-700"
+                  >
+                    Email <span className="text-red-500" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                    aria-required="true"
+                    className="
+                      w-full rounded-lg px-4 py-4 
+                      bg-[#FFFFFF]
+                      placeholder:text-base placeholder:text-[#6b7280]
+                      focus:outline-none focus:ring-2 focus:ring-[#00656D]
+                      border border-black/50
+                    "
+                  />
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block mb-2 font-medium text-gray-700"
+                >
+                  Phone Number <span className="text-red-500" aria-hidden="true">*</span>
+                </label>
                 <input
-                  name="name"
-                  placeholder="Name"
-                  value={form.name}
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  value={form.phone}
                   onChange={handleChange}
+                  type="tel"
+                  required
+                  aria-required="true"
                   className="
                     w-full rounded-lg px-4 py-4 
-                    bg-[#ffffff] 
-                    placeholder:text-xl placeholder:text-[#000000]
-                    focus:outline-none focus:ring-2 focus:ring-[#00656D]
-                    border border-black/50
-                  "
-                />
-
-                
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  value={form.email}
-                  onChange={handleChange}
-                  className="
-                    w-full rounded-lg px-4 py-4 
-                    bg-[#FFFFFF]
-                    placeholder:text-xl placeholder:text-[#000000]
+                    bg-[#ffffff]
+                    placeholder:text-base placeholder:text-[#6b7280]
                     focus:outline-none focus:ring-2 focus:ring-[#00656D]
                     border border-black/50
                   "
                 />
               </div>
 
-              <input
-                name="phone"
-                placeholder="Phone Number"
-                value={form.phone}
-                onChange={handleChange}
-                type="tel"
-                className="
-                  w-full rounded-lg px-4 py-4 
-                  bg-[#ffffff]
-                  placeholder:text-xl placeholder:text-[#000000]
-                  focus:outline-none focus:ring-2 focus:ring-[#00656D]
-                  border border-black/50
-                "
-              />
-
-              <textarea
-                name="message"
-                placeholder="Message"
-                rows={4}
-                value={form.message}
-                onChange={handleChange}
-                className="
-                  w-full rounded-lg px-4 py-4 
-                  bg-[#ffffff]
-                  placeholder:text-xl placeholder:text-[#000000]
-                  focus:outline-none focus:ring-2 focus:ring-[#00656D]
-                  border border-black/50
-                "
-              />
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block mb-2 font-medium text-gray-700"
+                >
+                  Message <span className="text-gray-400 text-sm">(optional)</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Write your message"
+                  rows={4}
+                  value={form.message}
+                  onChange={handleChange}
+                  className="
+                    w-full rounded-lg px-4 py-4 
+                    bg-[#ffffff]
+                    placeholder:text-base placeholder:text-[#6b7280]
+                    focus:outline-none focus:ring-2 focus:ring-[#00656D]
+                    border border-black/50
+                  "
+                />
+              </div>
             </div>
 
             <button
@@ -177,7 +217,6 @@ export default function ContactForm() {
           </form>
         </div>
 
-        
         {showPopup && (
           <div
             ref={overlayRef}
@@ -187,9 +226,7 @@ export default function ContactForm() {
             <div className="max-w-sm w-full bg-[#F7F6F1] rounded-2xl shadow-xl p-6 text-center">
               <h3 className="text-2xl font-bold text-[#00656D]">Thank you!</h3>
 
-              <p className="mt-2 text-gray-700">
-                You are officially on the waitlist.
-              </p>
+              <p className="mt-2 text-gray-700">You are officially on the waitlist.</p>
 
               <button
                 ref={okButtonRef}
@@ -204,7 +241,6 @@ export default function ContactForm() {
             </div>
           </div>
         )}
-
       </div>
     </section>
   );
