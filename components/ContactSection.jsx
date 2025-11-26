@@ -9,7 +9,8 @@ const fraunces = Fraunces({
 export default function ContactSection
 () {
   return (
-    <section
+    <section 
+    id="contact-us"
       
       className="w-full max-w-7xl mx-auto px-4 md:px-8 bg-[#00656D] text-[#F7F6F1] py-16 mt-10 mb-10 rounded-xl relative overflow-hidden"
     >

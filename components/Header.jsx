@@ -19,8 +19,7 @@ export default function Header() {
   href="#contact"
   className="inline-flex items-center px-3 py-2 rounded-md bg-[#00656D] text-[#F7F6F1] text-sm font-medium shadow-sm"
 >
-            Contact US
-          </a>
+Join Waitlist          </a>
         </div>
       </div>
     </header>
