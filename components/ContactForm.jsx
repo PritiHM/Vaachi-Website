@@ -60,6 +60,7 @@ export default function ContactForm() {
 
   return (
     <section
+    id="contact"
       className={`section ${fraunces.className} w-full mt-32 md:mt-10 lg:mt-20 sm:px-0 mb-4 md:mb-10 lg:mb-20`}
     >
       <div className="w-full max-w-7xl mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
