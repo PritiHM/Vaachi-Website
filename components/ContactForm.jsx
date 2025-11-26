@@ -108,7 +108,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   className="
                     w-full rounded-lg px-4 py-4 
-                    bg-[#ffffff] md:bg-[#333333]/10
+                    bg-[#ffffff] 
                     placeholder:text-xl placeholder:text-[#000000]
                     focus:outline-none focus:ring-2 focus:ring-[#00656D]
                     border border-black/50
@@ -124,7 +124,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   className="
                     w-full rounded-lg px-4 py-4 
-                    bg-[#ffffff] md:bg-[#333333]/10
+                    bg-[#FFFFFF]
                     placeholder:text-xl placeholder:text-[#000000]
                     focus:outline-none focus:ring-2 focus:ring-[#00656D]
                     border border-black/50
@@ -140,7 +140,7 @@ export default function ContactForm() {
                 type="tel"
                 className="
                   w-full rounded-lg px-4 py-4 
-                  bg-[#ffffff] md:bg-[#333333]/10
+                  bg-[#ffffff]
                   placeholder:text-xl placeholder:text-[#000000]
                   focus:outline-none focus:ring-2 focus:ring-[#00656D]
                   border border-black/50
@@ -155,7 +155,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 className="
                   w-full rounded-lg px-4 py-4 
-                  bg-[#ffffff] md:bg-[#333333]/10
+                  bg-[#ffffff]
                   placeholder:text-xl placeholder:text-[#000000]
                   focus:outline-none focus:ring-2 focus:ring-[#00656D]
                   border border-black/50

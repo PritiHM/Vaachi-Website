@@ -3,7 +3,7 @@ import WhoWeAre from "@/components/WhoWeAre";
 import VoiceHero from "@/components/VoiceHero";
 import ImpactSection from "@/components/ImpactSection";
 import ContactForm from "@/components/ContactForm";
-import JoinWaitList from "@/components/JoinWaitList";
+import JoinWaitList from "@/components/ContactSection";
 import ActionCards from "@/components/ActionCards";
 import BrandStrip from "@/components/BrandStrip";
 

@@ -25,10 +25,10 @@ export default function Hero() {
           <h2
             className={`
               ${fraunces.className}
-              text-4xl font-bold leading-tight text-[#F7F6F1]
+              text-4xl font-bold leading-tight text-[#ffffff]
             `}
           >
-            Where Art Speaks. Values Resonate.
+            There are years of <span className="text-[#00656D]">wisdom</span> lost in <br /><span  className="text-[#00656D]"> conversations </span> we don't have anymore.
           </h2>
 
           <div

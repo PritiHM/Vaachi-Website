@@ -6,7 +6,8 @@ const fraunces = Fraunces({
   weight: ["400", "700"],
 });
 
-export default function JoinWaitList() {
+export default function ContactSection
+() {
   return (
     <section
       

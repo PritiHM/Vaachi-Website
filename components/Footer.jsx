@@ -44,18 +44,12 @@ export default function Footer() {
 
           <div className="flex flex-col items-center md:items-end gap-2 order-2 md:order-3 md:col-start-3 md:justify-end">
             <div className="flex items-center gap-4 md:gap-5">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/images/Facebook.png"
-                  className="h-8 w-8 md:h-9 md:w-9"
-                  alt="Facebook icon"
-                />
-              </a>
+             
 
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                 <img
-                  src="/images/Instagram.png"
-                  className="h-8 w-8 md:h-9 md:w-9"
+                  src="/images/LinkedIn.png"
+                  className="h-9 w-9 md:h-10 md:w-10"
                   alt="Instagram icon"
                 />
               </a>
