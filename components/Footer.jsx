@@ -46,7 +46,7 @@ export default function Footer() {
             <div className="flex items-center gap-4 md:gap-5">
              
 
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/vaachi-foundation" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/images/LinkedIn.png"
                   className="h-9 w-9 md:h-10 md:w-10"
@@ -54,7 +54,7 @@ export default function Footer() {
                 />
               </a>
 
-              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@vaachi-foundation" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/images/youtube.png"
                   className="h-8 w-8 md:h-9 md:w-9"

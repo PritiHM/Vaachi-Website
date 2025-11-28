@@ -9,26 +9,25 @@ const fraunces = Fraunces({
 
 export default function Hero() {
   return (
-    <div className=" section pt-0 md:pt:0 w-full">
-      <div className="relative w-full min-h-[60vh] sm:h-screen">
+    <div className="section pt-0 md:pt-0 w-full ">
+      <div className="relative w-full min-h-[60vh] hidden sm:block sm:h-screen">
         <Image
-          src="/images/Heroimg.jpg"
+          src="/images/HeroimgDs.png"
           alt="Vaachi Foundation Performance"
           fill
           priority
           className="object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-black/50" />
-
-        <div className="absolute bottom-16 left-6 sm:left-10 right-6 sm:right-10 hidden sm:block z-30">
+        <div className="absolute bottom-16  left-6 sm:left-10 right-6 sm:right-10 z-30  px-10 py-10">
           <h2
             className={`
               ${fraunces.className}
               text-4xl font-bold leading-tight text-[#ffffff]
             `}
           >
-            There are years of <span className="text-[#00656D]">wisdom</span> lost in <br /><span  className="text-[#00656D]"> conversations </span> we don't have anymore.
+            There are years of <span className="text-[#00656D]">wisdom</span> lost in <br />
+            <span className="text-[#00656D]">conversations</span> we don't have anymore.
           </h2>
 
           <div
@@ -38,20 +37,28 @@ export default function Hero() {
             `}
           >
             <p className="text-xl opacity-90 max-w-[600px]">
-              Vaachi Foundation nurtures the power of performing arts,
-              build empathy, and inspire collective harmony.
+              Vaachi Foundation nurtures the power of performing arts, build empathy, and inspire collective harmony.
             </p>
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-[#00656D] hover:bg-[#31757a]
-                         text-[#F7F6F1] w-[200px] h-[50px] rounded-md font-medium justify-center"
+              className="inline-flex items-center gap-2 bg-[#00656D] hover:bg-[#31757a] text-[#F7F6F1] w-[200px] h-[50px] rounded-md font-medium justify-center"
             >
               Write to Us
               <Image src="/images/arrow.png" width={20} height={20} alt="arrow" />
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="relative w-full min-h-[60vh] sm:hidden">
+        <Image
+          src="/images/HeroimgM.png"
+          alt="Vaachi Foundation Performance (mobile)"
+          fill
+          priority
+          className="object-cover object-center"
+        />
       </div>
 
       <div className="block sm:hidden px-5 py-8 text-left">
@@ -70,8 +77,7 @@ export default function Hero() {
             text-base text-gray-800 mb-6
           `}
         >
-          Vaachi Foundation nurtures the power of performing arts to amplify
-          human values, build empathy, and inspire collective harmony.
+          Vaachi Foundation nurtures the power of performing arts to amplify human values, build empathy, and inspire collective harmony.
         </p>
 
         <a
