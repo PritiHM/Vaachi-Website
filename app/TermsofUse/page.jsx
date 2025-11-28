@@ -19,7 +19,7 @@ export const metadata = {
   description: "General Terms and Conditions - Vaachi Foundation",
 };
 
-export default function TermsPage() {
+export default function TermsofUse() {
   return (
     <main className={`${nunito.className} min-h-screen py-12`}>
       <div className="max-w-7xl mx-auto py-4">
