@@ -19,12 +19,14 @@ export default function ActionCards() {
       <div className="w-full max-w-7xl mx-auto mt-5 md:mt-10 lg:mt-20 pb-5 lg:pb-10 px-4 sm:px-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {cards.map((card) => (
-           <article
-  key={card.id}
-  onClick={() => {
-    document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" });
-  }}
-  className="cursor-pointer
+            <article
+              key={card.id}
+              onClick={() => {
+                document
+                  .getElementById("contact-us")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="cursor-pointer
   relative rounded-xl 
   shadow-[0_0_12px_rgba(0,0,0,0.12)]
   hover:shadow-[0_0_18px_rgba(0,0,0,0.16)] 
@@ -36,12 +38,9 @@ export default function ActionCards() {
   flex flex-col justify-center items-start 
   p-6 
   hover:-translate-y-1"
-
-
-
               aria-labelledby={`card-${card.id}-title`}
             >
-              <div className="absolute bottom-0 right-0 opacity-25 pointer-events-none z-0">
+              <div className="absolute bottom-0 right-0 opacity-75 pointer-events-none z-0">
                 <Image
                   src="/images/corner-design1.png"
                   alt=""

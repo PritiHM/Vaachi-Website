@@ -168,7 +168,7 @@ export default function privacy() {
            </section>
             <section>
             <h2 className="font-fraunces my-6">12. Contact Us If you have any questions, concerns, or requests relating to this Privacy Policy
-                 or our handling of your personal information, please contact us at:<span className='text-[#00656D'>contact@vaachi.or</span> </h2>
+                 or our handling of your personal information, please contact us at:<span className='text-[#00656D'>contact@vaachi.org</span> </h2>
            </section>
         </article>
       </div>

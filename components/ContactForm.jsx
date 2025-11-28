@@ -33,10 +33,25 @@ export default function ContactForm() {
     }
 
     setSubmitting(true);
+
     try {
-      await new Promise((r) => setTimeout(r, 600));
-      setShowPopup(true);
-      setForm({ name: "", email: "", phone: "", message: "" });
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setShowPopup(true);
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong while sending the email.");
     } finally {
       setSubmitting(false);
     }
@@ -63,7 +78,7 @@ export default function ContactForm() {
       id="contact"
       className={`section ${fraunces.className} w-full mt-32 md:mt-10 lg:mt-20 sm:px-0 mb-4 md:mb-10 lg:mb-20`}
     >
-      <div className="w-full max-w-7xl mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14">
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">
           <Image
               src="/images/BePartOfStory2.png"
@@ -77,16 +92,16 @@ export default function ContactForm() {
             alt="Contact Illustration"
             width={500}
             height={500}
-            className="object-contain w-full max-w-[450px] hidden sm:block"
+            className="object-contain w-full max-w-[630px] hidden sm:block"
           />
         </div>
 
         <div className="w-full lg:pr-10 order-2 lg:order-1">
-          <h2 className="text-3xl sm:text-[32px] md:text-[36px] font-bold text-[#1f2937] mb-6 px-5">
+          <h2 className="text-3xl sm:text-[32px] md:text-[36px] font-bold text-[#1f2937] mb-6 px-3 sm:px-0">
             Be Part of the Story
           </h2>
 
-          <p className="text-base sm:text-lg leading-[28px] text-gray-700 mb-10 px-5">
+          <p className="text-base sm:text-lg leading-[28px] text-gray-700 mb-10 px-3 sm:px-0">
             Every voice matters. Every gesture adds to the harmony.
             <br />
             Join hands in amplifying values through art.
@@ -216,6 +231,7 @@ export default function ContactForm() {
             </button>
           </form>
         </div>
+
 
         {showPopup && (
           <div

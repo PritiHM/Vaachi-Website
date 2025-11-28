@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Fraunces, Nunito } from "next/font/google";
 
@@ -13,14 +15,14 @@ const nunito = Nunito({
 
 export default function WhoWeAre() {
   return (
-<section className="section pt-0 md:pt-14 w-full flex justify-center bg-[#F7F6F1]">
+    <section className="section pt-0 md:pt-14 w-full flex justify-center bg-[#F7F6F1] px-3 sm:px-0">
       <div
         className="
           bg-[#00656D] text-[#F7F6F1] rounded-2xl shadow-lg relative
            max-w-7xl w-full
           overflow-visible
            pt-2 pb-4 px-2
-          md:pt-16 md:pb-56 mx-6 md:mx-auto
+          md:pt-16 md:pb-56
         "
       >
         <div className="absolute top-0 right-0 w-20 h-20  hidden md:block pointer-events-none select-none">
@@ -45,9 +47,8 @@ export default function WhoWeAre() {
               <p
                 className={`${nunito.className} text-base md:text-xl leading-[1.9] opacity-90 max-w-[600px]`}
               >
-                Vaachi Foundation is a non-profit dedicated to cultivating
-                human values through the transformative language of performing
-                arts.
+                Vaachi Foundation is a non-profit dedicated to cultivating human
+                values through the transformative language of performing arts.
               </p>
             </div>
 
@@ -70,7 +71,6 @@ export default function WhoWeAre() {
         </div>
 
         <div className="md:absolute inset-x-6 bottom-8 flex flex-col md:flex-row gap-4 md:gap-6 px-2 md:px-0 z-10 items-center md:items-stretch md:justify-between">
-          
           <div
             className="
               bg-[#F7F6F1] text-[#00656D] rounded-xl shadow-md
