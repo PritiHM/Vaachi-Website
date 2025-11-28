@@ -25,7 +25,7 @@ const fraunces = Fraunces({
 });
 
 
-export default function PrivacyPage() {
+export default function privacy() {
   return (
 <main id="privacypolicy" className={`${fraunces.className} min-h-screen py-12 px-5 bg-white text-gray-900`}>
       <div className="max-w-7xl mx-auto">

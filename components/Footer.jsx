@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center md:items-center gap-2 order-3 md:order-2 md:col-start-2 text-center">
-            <a href="/privacypolicy" className="text-sm md:text-xl hover:underline font-bold">
+            <a href="/privacy" className="text-sm md:text-xl hover:underline font-bold">
               Privacy Policy
             </a>
             <a href="#" className="text-sm md:text-xl hover:underline font-bold">
