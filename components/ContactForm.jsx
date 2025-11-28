@@ -33,10 +33,25 @@ export default function ContactForm() {
     }
 
     setSubmitting(true);
+
     try {
-      await new Promise((r) => setTimeout(r, 600));
-      setShowPopup(true);
-      setForm({ name: "", email: "", phone: "", message: "" });
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setShowPopup(true);
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong while sending the email.");
     } finally {
       setSubmitting(false);
     }
@@ -60,11 +75,10 @@ export default function ContactForm() {
 
   return (
     <section
-    id="contact"
+      id="contact"
       className={`section ${fraunces.className} w-full mt-32 md:mt-10 lg:mt-20 sm:px-0 mb-4 md:mb-10 lg:mb-20`}
     >
       <div className="w-full max-w-7xl mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
-        
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">
           <Image
             src="/images/BePartOfStory2.png"
@@ -100,7 +114,6 @@ export default function ContactForm() {
           >
             <div className="flex flex-col gap-6 mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
                 <input
                   name="name"
                   placeholder="Name"
@@ -115,7 +128,6 @@ export default function ContactForm() {
                   "
                 />
 
-                
                 <input
                   name="email"
                   type="email"
@@ -177,7 +189,6 @@ export default function ContactForm() {
           </form>
         </div>
 
-        
         {showPopup && (
           <div
             ref={overlayRef}
@@ -204,7 +215,6 @@ export default function ContactForm() {
             </div>
           </div>
         )}
-
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ export default function ActionCards() {
               key={card.id}
               className={`
   relative rounded-xl 
-  shadow-[0_0_12px_rgba(0,0,0,0.12)]   /* very soft 360° shadow */
+  shadow-[0_0_12px_rgba(0,0,0,0.12)]  
   hover:shadow-[0_0_18px_rgba(0,0,0,0.16)] 
   transition-shadow duration-200
 
