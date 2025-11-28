@@ -66,14 +66,14 @@ export default function ContactForm() {
       <div className="w-full max-w-7xl mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14">
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">
           <Image
-            src="/images/image(1).png"
+            src="/images/BePartOfStory2.png"
             alt="Contact Illustration Mobile"
             width={400}
             height={400}
             className="w-full object-contain block sm:hidden"
           />
           <Image
-            src="/images/BePartOfStory.png"
+            src="/images/image(1).png"
             alt="Contact Illustration"
             width={500}
             height={500}
