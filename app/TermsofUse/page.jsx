@@ -1,175 +1,178 @@
-import React from 'react';
-import { Fraunces } from 'next/font/google';
-import { Nunito } from "next/font/google";
+// app/terms/page.jsx
+import React from "react";
+import { Nunito, Fraunces } from "next/font/google";
 
-
-
-
-export const metadata = {
-  title: 'Terms of use',
-  description: 'Terms of use',
-  
-  
-};
-const fraunces = Fraunces({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-    variable: '--font-fraunces', 
-    display: 'swap',
-  });
-  const nunito = Nunito({
+const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  variable: "--font-nunito",
   display: "swap",
 });
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
 
-export default function Terms0fUse() {
+export const metadata = {
+  title: "General Terms and Conditions",
+  description: "General Terms and Conditions - Vaachi Foundation",
+};
+
+export default function TermsPage() {
   return (
-<main id="termsofuse" className={`${fraunces.className} min-h-screen py-12 px-5 bg-white text-gray-900`}>
-      <div className="max-w-7xl mx-auto">
-        <article className="prose prose-lg lg:prose-xl">
-          <header>
-           <h1 className="font-fraunces font-bold text-4xl text-[#000000] pb-12">
-  Privacy Policy
-</h1>
+    <main className={`${nunito.className} min-h-screen py-12`}>
+      <div className="max-w-7xl mx-auto py-4">
+        <article className="p-8">
 
-<p className={`${nunito.className}`}>
-  Vaachi Foundation (“Vaachi”, “we”, “our”, “us”) is a non-profit organization
-  engaged in amplifying community stakeholdership through dialogue and engagement.
-  We value your trust and respect your privacy. This Privacy Policy explains how we
-  collect, use, disclose, and protect your personal information when you interact with
-  our website, programmes, events, consultations, surveys, and other initiatives
-  (collectively, the “Services”). By accessing or using our Services, you agree to the
-  terms of this Privacy Policy.
-</p>
+          <header className="mb-8">
+            <h1 className={`${fraunces.className} text-4xl font-bold uppercase tracking-wide`}>
+              GENERAL TERMS AND CONDITIONS
+            </h1>
 
-            
+            <p className={`${fraunces.className} mt-4 text-sm leading-relaxed`}>
+              <strong>VAACHI FOUNDATION</strong> By accessing, registering on, or participating in any programme, event, dialogue,
+              offline or online community hosted by Vaachi Foundation (“Vaachi”, “we”, “us”, “our”), you agree to these Terms
+              and Conditions (“Terms”). Please read them carefully before using our website, digital platforms, or offline activities
+              (collectively, the “Platform”). Vaachi Foundation is a non-profit organisation that aims to create community-led
+              stakeholdership through dialogue and engagement.
+            </p>
           </header>
 
-          <section>
-            <h2 className="font-fraunces my-6">1. Information We Collect We may collect the following categories of information, depending on how 
-                you engage with us: </h2>
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              1. ELIGIBILITY
+            </h2>
 
-           <h3 className={`${nunito.className} my-4`}>1.1 Personal details Name Email address Contact details you voluntarily provide Gender or other demographic details (if and when requested)</h3>
-            
-
-            <h3 className={`${nunito.className} my-4`}>1.2 Organisational / affiliation details Organisation / community / institution name Role or designation Sector / area of work Any supporting documents or information you voluntarily share (e.g., project descriptions, proposals)
-</h3>
-            
-
-           <h3 className={`${nunito.className} my-4`}> 1.3 Participation and engagement information Registrations for events, dialogues, workshops, and consultations Attendance records Audio, video, and photographic recordings of events and meetings (where applicable and allowed) Responses submitted in surveys, feedback forms, polls, or other engagement tools</h3>
-            
-
-           <h3 className={`${nunito.className} my-4`}> 1.4 Payment and donation information (if applicable) Details necessary to process donations, event fees, or other payments (collected and processed via secure payment gateways) Transaction-related information (amount, date, mode of payment) Note: We do not store full payment card details on our own systems; such processing is typically handled by third-party payment service providers.</h3>
-           
-
-            <h3 className={`${nunito.className} my-4`}>1.5 Technical information Device type, browser type, operating system IP address, approximate location Cookies and similar technologies Log data and usage analytics relating to your interactions with our website and online tools You may choose not to provide certain information, but this may limit your ability to participate in certain initiatives or access certain features.</h3>
-           
-
-            <h3 className={`${nunito.className} my-4`}>1.6 Data From Contests and Surveys</h3>
-            
+            <p className={`${fraunces.className} mb-2`}>1.1 You must be 18 years or older to register an account or participate in programmes requiring registration.</p>
+            <p className={`${fraunces.className} mb-2`}>1.2 Individuals under 18 may participate only with parental or guardian consent, particularly where personal data is collected.</p>
+            <p className={`${fraunces.className} mb-2`}>1.3 By using the Platform, you confirm legal capacity to enter into a binding agreement.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6">2. How We Use Your Information We use your information for purposes consistent with our 
-                non-profit mission, including: To register you as a participant, volunteer, partner, contributor, or stakeholder in Vaachi
-                 initiatives To plan, organize, and manage dialogues, consultations, events, workshops, and other engagement activities To 
-                 communicate with you about events, updates, invitations, opportunities, research, and programme-related information To create
-                  anonymised or aggregated insights for research, reporting, and advocacy, without identifying you personally To maintain
-                   records of participation, contributions, and donations (where applicable) To improve our Services, develop new programmes, 
-                   and enhance outreach and impact To ensure the security and proper functioning of our website and platforms To comply with
-                    legal, regulatory, accounting, and reporting obligations We may also use your information for any other purpose that
-                 is reasonably related to the above and/or that we disclose to you at the time of collection.</h2>
-            
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              2. REGISTRATION & ACCURACY OF INFORMATION
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>2.1 You must provide true, accurate, and complete information during registration and keep it updated.</p>
+            <p className={`${fraunces.className} mb-2`}>2.2 Participant categories may include: community members; dialogue participants; facilitators; volunteers; interns; partner organisations; and donors.</p>
+            <p className={`${fraunces.className} mb-2`}>2.3 Vaachi may verify identity or organisational details where necessary for safety or compliance.</p>
+            <p className={`${fraunces.className} mb-2`}>2.4 You are responsible for keeping login credentials confidential and reporting any unauthorised use.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6"> 3. Sharing of Information We do not sell your personal information 
-                to third parties. We may share your information as follows: </h2>
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              3. NATURE OF THE PLATFORM & PERMITTED USE
+            </h2>
 
-            <h3 className={`${nunito.className} my-4`}> 3.1 With other participants and stakeholders For collaboration, networking, and community-
-                building purposes in line with our mission Through participant lists, reports, or summaries of dialogues,
-                 where this is contextually appropriate (for example, listing names and affiliations
-                 of speakers or participants in event materials)  </h3>
-            
+            <p className={`${fraunces.className} mb-2`}>3.1 Vaachi provides non-profit, community-oriented spaces for dialogue and engagement. The Platform may include events, workshops, forums, messaging groups, surveys,
+              research activities, and resource materials.</p>
 
-           <h3 className={`${nunito.className} my-4`}>3.2 With service providers With trusted third-party service providers who assist us in operating our website, communication tools, data storage, payment processing, analytics, event facilitation (e.g., video conferencing platforms), and similar functions These service providers are expected to process data only on our instructions and with appropriate safeguards. </h3>
-            
+            <p className={`${fraunces.className} mb-2`}>3.2 You agree NOT to use the Platform for: commercial promotion unless expressly permitted; political campaigning or hate propaganda; harassment, abuse, threats, or intimidation;
+              spreading misinformation; unlawful conduct.</p>
 
-            <h3 className={`${nunito.className} my-4`}>3.3 With partners and funders In anonymised or aggregated form for reporting, research, and impact assessments In limited cases, with your consent, we may share identifiable information with collaborating institutions and partners for joint initiatives</h3>
-           
-
-            <h3 className={`${nunito.className} my-4`}> 3.4 With authorities and as required by law With governmental, regulatory, or law-enforcement authorities when we are legally required to do so, or when such disclosure is necessary to protect our rights, safety, or the rights and safety of others </h3>
-            
-
-           <h3 className={`${nunito.className} my-4`}>3.5 With your consent In any other situation where you explicitly consent to such sharing. Important: Once you voluntarily share information directly with other participants, organisations, or on public platforms (e.g., speaking at an event, posting in a public forum, or sharing your details openly), Vaachi cannot control or be responsible for how those third parties use or further disclose that information. </h3>
-            
-
-            
+            <p className={`${fraunces.className} mb-2`}>3.3 You must comply with all applicable Indian laws, including those governing speech, intellectual property, technology, and data protection.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6">4. Data Storage & Security We use reasonable technical and organizational 
-                measures to protect your information, including secure servers, restricted access, and industry-standard 
-                security practices. However: No method of transmission over the internet or electronic storage is completely 
-                secure. We cannot guarantee absolute security of your data. You acknowledge that you provide information at your own 
-                risk and are responsible for
-                 safeguarding any account credentials or devices used to access our Services.</h2>
-            
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              4. COMMUNITY STANDARDS & PROHIBITED CONDUCT
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>4.1 You must not: post defamatory, obscene, discriminatory, hateful, or unlawful content; incite violence or self-harm; impersonate others or misrepresent affiliations; upload content you lack rights to use; use bots, scrapers, or automated tools without permission; attempt to breach security or access unauthorised data.</p>
+
+            <p className={`${fraunces.className} mb-2`}>4.2 Vaachi may remove content or restrict access where violations occur.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6">5. Retention of Information We retain your information for as long as: 
-                It is necessary for the purposes described in this Privacy Policy, or Required by applicable laws, regulations,
-                 or record-keeping obligations, or Needed to establish, exercise, or defend legal claims. We may retain anonymised or
-                 aggregated information indefinitely, provided it cannot be used to identify you.</h2>
-            
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              5. PROGRAMMES, DONATIONS & PAYMENTS
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>5.1 Vaachi may offer paid workshops, events, or learning modules and accept donations.</p>
+
+            <p className={`${fraunces.className} mb-2`}>5.2 Unless specified otherwise or required by law, all fees and donations are non-refundable.</p>
+
+            <p className={`${fraunces.className} mb-2`}>5.2 Unless specified otherwise or required by law, all fees and donations are non-refundable.</p>
+
+            <p className={`${fraunces.className} mb-2`}>5.4 Third-party payment processors may apply their own terms.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6">6. Your Rights Subject to applicable law, you may have the right to: Access the personal information we hold about you Update or correct inaccurate or incomplete information Request deletion of your personal data, subject to our legal and operational obligations Withdraw consent where processing is based on your consent (this will not affect processing done before withdrawal) Opt out of receiving non-essential communications such as newsletters or promotional updates To exercise any of these rights, please contact us at contact@vaachi.org. We may need to verify your identity before acting on certain requests. </h2>
-           
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              6. CONTENT OWNERSHIP & INTELLECTUAL PROPERTY
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>6.1 User Content (a) “User Content” includes all text, media, recordings, comments, or materials you submit. (b) You retain ownership of your User Content. (c) You grant Vaachi a non-exclusive, worldwide, royalty-free licence to use such content for non-profit purposes, including documentation, reporting, education, and promotion. (d) Vaachi will credit you where feasible unless anonymity is requested or deemed necessary. (e) You confirm your content: is original or licensed; does not infringe rights or laws; does not breach confidentiality.</p>
+
+            <p className={`${fraunces.className} mb-2`}>6.2 Vaachi Content (a) Vaachi Content (logos, text, designs, resources, videos, etc.) is protected by intellectual property laws. (b) You may download and use Vaachi Content for non-commercial purposes only. (c) You may not alter, distribute, or commercially exploit Vaachi Content without written consent.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6">7. Children’s Privacy Our Services are not primarily intended for children 
-                under 18 years of age. We do not knowingly collect personal data from children under 18 without appropriate consent or
-                 authorisation from a parent, guardian, or responsible adult, where required by law and by our own internal policies.
-                  If you believe that a child under 18 has provided us with personal information without
-                 appropriate consent, please contact us so that we can take appropriate steps. </h2>
-            
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              7. DATA PROTECTION & PRIVACY
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>7.1 Vaachi processes personal data responsibly and in accordance with applicable Indian data protection laws.</p>
+            <p className={`${fraunces.className} mb-2`}>7.2 Information collected may include name, contact details, demographics (if voluntarily provided), event participation, recordings, survey responses, and submissions.</p>
+            <p className={`${fraunces.className} mb-2`}>7.3 Data is processed for purposes such as programme administration, communication, record-keeping, research, and legal compliance.</p>
+            <p className={`${fraunces.className} mb-2`}>7.4 Where legally required, Vaachi will obtain consent before processing personal data.</p>
+            <p className={`${fraunces.className} mb-2`}>7.5 Reasonable security measures are implemented to protect personal data.</p>
+            <p className={`${fraunces.className} mb-2`}>7.6 Subject to law, you may request access, correction, deletion, or withdrawal of consent.</p>
+            <p className={`${fraunces.className} mb-2`}>7.7 Data may be shared with service providers, funders (in anonymised form), or authorities where legally required.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6">8. Third-Party Websites and Platforms Our Services may contain links to third-party websites, tools, or platforms (such as payment gateways, survey tools, or video conferencing services). We do not control and are not responsible for the privacy practices, security, or content of such third parties. Your use of those services is subject to their respective privacy policies and terms. We encourage you to review the privacy policies of any third-party sites or services you use. </h2>
-            
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              8. DISCLAIMERS, LIABILITY & ABSOLUTE INDEMNIFICATION
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>8.1 Vaachi does not endorse participant statements, opinions, or third-party content shared on the Platform.</p>
+            <p className={`${fraunces.className} mb-2`}>8.2 Information shared may reflect lived experiences and may not always be complete or applicable to your circumstances.</p>
+            <p className={`${fraunces.className} mb-2`}>8.3 The Platform and its content are provided “as is” without warranties of any kind.</p>
+            <p className={`${fraunces.className} mb-2`}>8.4 Vaachi is not liable for any loss, damage, injury, or claim arising from: use or inability to use the Platform; actions or disputes involving third parties; User Content or third-party content.</p>
+            <p className={`${fraunces.className} mb-2`}>8.5 ABSOLUTE INDEMNIFICATION (as requested) You agree to absolutely, unconditionally, and irrevocably indemnify and hold harmless Vaachi, including its trustees, officers, employees, volunteers, and affiliates, from all losses, claims, liabilities, damages, costs, and expenses (including legal fees) arising from: your use of the Platform; your User Content; your breach of these Terms or applicable law; your infringement of rights of any person or entity.</p>
+            <p className={`${fraunces.className} mb-2`}>8.6 This indemnity is absolute, continuing, and survives termination. 8.7 Nothing excludes liability that cannot be excluded under Indian law.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6">9. International Data Transfers Depending on where our 
-                service providers and servers are located, your information may be stored or processed in 
-                jurisdictions different from your own. By using our Services and providing information to us, 
-                you acknowledge that your information may be transferred to, stored in, and processed in such
-                 jurisdictions, subject to applicable law and reasonable safeguards. </h2>
-           
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              9. SUSPENSION & TERMINATION
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>9.1 Vaachi may suspend or terminate access without notice where: Terms or laws are breached; safety or legal risk arises; participation contradicts programme objectives.</p>
+            <p className={`${fraunces.className} mb-2`}>9.2 You may request account deletion by contacting Vaachi.</p>
+            <p className={`${fraunces.className} mb-2`}>9.3 Provisions on IP, liability, and indemnity survive termination.</p>
           </section>
 
-          <section>
-            <h2 className="font-fraunces my-6">
-10. Disclaimer, Limitation of Liability & Indemnity To the maximum extent permitted by applicable law: Our Services, including our website, communications, and related tools, are provided on an “as is” and “as available” basis. Vaachi Foundation and its trustees, officers, employees, volunteers, representatives, and partners disclaim all warranties, express or implied, relating to the Services and this Privacy Policy, including but not limited to accuracy, completeness, reliability, and fitness for a particular purpose. Vaachi Foundation and its trustees, officers, employees, volunteers, representatives, and partners shall not be liable for any direct, indirect, incidental, consequential, special, exemplary, or punitive damages, or for any loss of data, goodwill, opportunities, revenue, or reputation arising out of or in connection with: Your use of or inability to use the Services, Any unauthorised access to or alteration of your information, Any third-party actions, omissions, tools, or services, or Any reliance placed by you on information provided through the Services. By using our Services, you agree to fully indemnify, defend, and hold harmless Vaachi Foundation and its trustees, officers, employees, volunteers, representatives, and partners from and against any and all claims, demands, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or in connection with: Your use of the Services, Any content, information, or materials you provide or make available,
- or Your breach of this Privacy Policy or any applicable law or rights of a third party.</h2>
-            
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              10. GOVERNING LAW & DISPUTE RESOLUTION
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>10.1 These Terms are governed by the laws of India.</p>
+            <p className={`${fraunces.className} mb-2`}>10.2 Disputes will be subject to the exclusive jurisdiction of the courts in the city where Vaachi Foundation is registered.</p>
           </section>
-          <section>
-            <h2 className="font-fraunces my-6">11. Updates to This Privacy Policy We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or Services. The updated version will be posted on our website with an updated “Last Updated” date. Your continued use of the Services after any changes are posted will constitute your acceptance
-                 of those changes. We encourage you to review this Privacy Policy periodically.</h2>
-           </section>
-            <section>
-            <h2 className="font-fraunces my-6">12. Contact Us If you have any questions, concerns, or requests relating to this Privacy Policy
-                 or our handling of your personal information, please contact us at:<span className='text-[#00656D'>contact@vaachi.or</span> </h2>
-           </section>
+
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              11. CHANGES TO THESE TERMS
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>11.1 Vaachi may amend these Terms as required.</p>
+            <p className={`${fraunces.className} mb-2`}>11.2 Continued use after updates constitutes acceptance.</p>
+          </section>
+
+          <section className="mb-6">
+            <h2 className={`${fraunces.className} text-xl font-bold mb-3`}>
+              12. CONTACT US
+            </h2>
+
+            <p className={`${fraunces.className} mb-2`}>
+              Email: <a href="mailto:contact@vaachi.org" className="text-[#00656D] underline">contact@vaachi.org</a>
+            </p>
+          </section>
+
         </article>
       </div>
     </main>

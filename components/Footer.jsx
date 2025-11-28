@@ -37,7 +37,7 @@ export default function Footer() {
             <a href="/privacy" className="text-sm md:text-xl hover:underline font-bold">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm md:text-xl hover:underline font-bold">
+            <a href="/TermsofUse" className="text-sm md:text-xl hover:underline font-bold">
               Terms of Use
             </a>
           </div>
