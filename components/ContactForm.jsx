@@ -76,12 +76,12 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className={`section ${fraunces.className} w-full mt-32 md:mt-10 lg:mt-20 sm:px-0 mb-4 md:mb-10 lg:mb-20`}
+      className={`section ${fraunces.className} w-full mt-16 md:mt-10 lg:mt-20 sm:px-0 mb-4 md:mb-10 lg:mb-20`}
     >
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14">
-        <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-10 lg:mb-0">
+        <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-0 lg:mb-0">
           <Image
-              src="/images/BePartOfStory2.png"
+              src="/images/image(1).png"
             alt="Contact Illustration Mobile"
             width={400}
             height={400}
@@ -92,7 +92,7 @@ export default function ContactForm() {
             alt="Contact Illustration"
             width={500}
             height={500}
-            className="object-contain w-full max-w-[630px] hidden sm:block"
+            className="object-contain w-full max-w-[630px] hidden sm:block rounded-2xl"
           />
         </div>
 
@@ -223,7 +223,7 @@ export default function ContactForm() {
               disabled={submitting}
               className="
                 w-full sm:w-[180px] bg-[#00656D] hover:bg-[#005a58] text-[#F7F6F1]
-                px-6 py-3 rounded-md transition 
+                px-6 py-3 rounded-xl transition 
                 disabled:opacity-60 text-[16px] font-semibold
               "
             >

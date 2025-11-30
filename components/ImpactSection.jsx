@@ -54,7 +54,7 @@ export default function ImpactSection() {
     <>
       <BrandStrip logos={logos} speed={60} />
 
-      <section className="section pt-6 md:pt-10 pb-6 md:pb-10 w-full max-w-7xl mx-auto px-3 md:px-0 ">
+      <section className="section pt-6 md:pt-10 pb-0 md:pb-10 w-full max-w-7xl mx-auto px-3 md:px-0 ">
         <h2
           className={`${fraunces.className} text-2xl md:text-4xl font-bold text-[#291F1E] mb-3`}
         >
