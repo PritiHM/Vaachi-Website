@@ -61,14 +61,12 @@ export default function Hero() {
       </div>
 
       {/* Mobile Image */}
-      <div className="relative w-full min-h-[40vh] sm:hidden">
-        <Image
+      <div className="relative w-full min-h-full sm:hidden">
+        <img
           src="/images/HeroimgM.png"
           alt="Vaachi Foundation Performance (mobile)"
-          fill
-          priority
-          sizes="100vw"
-          className=" object-cover object-center"
+          className=" object-cover object-center w-full h-full"
+          preload="true"
         />
       </div>
 
