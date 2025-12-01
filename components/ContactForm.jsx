@@ -80,9 +80,9 @@ export default function ContactForm() {
     >
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14">
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-0 lg:mb-0">
-          <div className="relative h-[240px] w-full sm:hidden">
+          <div className="relative h-[250px] w-full sm:hidden">
             <Image
-              src="/images/image(1).png"
+              src="/images/gray.png"
               alt="Contact Illustration Mobile"
               fill
               className="object-cover grayscale"
@@ -92,11 +92,11 @@ export default function ContactForm() {
           </div>
 
           <Image
-            src="/images/image(1).png"
+            src="/images/gray.png"
             alt="Contact Illustration"
             width={500}
             height={500}
-            className="object-contain w-full max-w-[530px] grayscale hidden sm:block"
+            className="object-contain w-full max-w-[464px] grayscale hidden sm:block"
           />
         </div>
 
