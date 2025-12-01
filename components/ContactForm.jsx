@@ -80,19 +80,23 @@ export default function ContactForm() {
     >
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14">
         <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-0 lg:mb-0">
-          <Image
+          <div className="relative h-[240px] w-full sm:hidden">
+            <Image
               src="/images/image(1).png"
-            alt="Contact Illustration Mobile"
-            width={400}
-            height={400}
-            className="w-full object-contain block sm:hidden"
-          />
+              alt="Contact Illustration Mobile"
+              fill
+              className="object-cover grayscale"
+              sizes="100vw"
+              priority
+            />
+          </div>
+
           <Image
             src="/images/image(1).png"
             alt="Contact Illustration"
             width={500}
             height={500}
-            className="object-contain w-full max-w-[630px] hidden sm:block rounded-2xl"
+            className="object-contain w-full max-w-[530px] grayscale hidden sm:block"
           />
         </div>
 
@@ -119,7 +123,10 @@ export default function ContactForm() {
                     htmlFor="name"
                     className="block mb-2 font-medium text-gray-700"
                   >
-                    Name <span className="text-red-500" aria-hidden="true">*</span>
+                    Name{" "}
+                    <span className="text-red-500" aria-hidden="true">
+                      *
+                    </span>
                   </label>
                   <input
                     id="name"
@@ -144,7 +151,10 @@ export default function ContactForm() {
                     htmlFor="email"
                     className="block mb-2 font-medium text-gray-700"
                   >
-                    Email <span className="text-red-500" aria-hidden="true">*</span>
+                    Email{" "}
+                    <span className="text-red-500" aria-hidden="true">
+                      *
+                    </span>
                   </label>
                   <input
                     id="email"
@@ -172,7 +182,10 @@ export default function ContactForm() {
                   htmlFor="phone"
                   className="block mb-2 font-medium text-gray-700"
                 >
-                  Phone Number <span className="text-red-500" aria-hidden="true">*</span>
+                  Phone Number{" "}
+                  <span className="text-red-500" aria-hidden="true">
+                    *
+                  </span>
                 </label>
                 <input
                   id="phone"
@@ -198,7 +211,8 @@ export default function ContactForm() {
                   htmlFor="message"
                   className="block mb-2 font-medium text-gray-700"
                 >
-                  Message <span className="text-gray-400 text-sm">(optional)</span>
+                  Message{" "}
+                  <span className="text-gray-400 text-sm">(optional)</span>
                 </label>
                 <textarea
                   id="message"
@@ -232,7 +246,6 @@ export default function ContactForm() {
           </form>
         </div>
 
-
         {showPopup && (
           <div
             ref={overlayRef}
@@ -242,7 +255,9 @@ export default function ContactForm() {
             <div className="max-w-sm w-full bg-[#F7F6F1] rounded-2xl shadow-xl p-6 text-center">
               <h3 className="text-2xl font-bold text-[#00656D]">Thank you!</h3>
 
-              <p className="mt-2 text-gray-700">You are officially on the waitlist.</p>
+              <p className="mt-2 text-gray-700">
+                You are officially on the waitlist.
+              </p>
 
               <button
                 ref={okButtonRef}

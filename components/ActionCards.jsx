@@ -28,7 +28,7 @@ export default function ActionCards() {
             <article
               key={card.id}
               onClick={scrollToContact}
-              className="cursor-pointer relative rounded-xl shadow-[0_0_12px_rgba(0,0,0,0.12)]  hover:shadow-[0_0_18px_rgba(0,0,0,0.16)]  transition-all duration-300  bg-[#F7F6F1] min-h-[135px] flex flex-col justify-center items-start p-6 hover:-translate-y-1"
+              className="cursor-pointer relative rounded-lg sm:rounded-xl shadow-[0_0_12px_rgba(0,0,0,0.12)]  hover:shadow-[0_0_18px_rgba(0,0,0,0.16)]  transition-all duration-300  bg-[#F7F6F1] min-h-[135px] flex flex-col justify-center items-start p-6 hover:-translate-y-1"
               aria-labelledby={`card-${card.id}-title`}
             >
               {/* Decorative Corner Image */}

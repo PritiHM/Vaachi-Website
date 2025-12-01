@@ -12,7 +12,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact-us"
-      className="w-full max-w-7xl mx-auto px-4 md:px-8 bg-[#00656D] text-[#F7F6F1] py-20 md:py-28 mt-10 mb-10 md:rounded-2xl relative overflow-hidden"
+      className="w-full max-w-7xl mx-auto px-4 md:px-8 bg-[#00656D] text-[#F7F6F1] py-20 md:py-20 mt-10 mb-10 md:rounded-2xl relative overflow-hidden"
     >
       <div className="pointer-events-none absolute top-0 right-0 z-20">
         <Image

@@ -46,7 +46,7 @@ export default function Hero() {
 
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 bg-[#00656D] hover:bg-[#31757a] text-[#F7F6F1] w-[200px] h-[50px] rounded-xl font-medium justify-center"
+              className="inline-flex items-center gap-2 bg-[#00656D] hover:bg-[#31757a] text-[#F7F6F1] w-[200px] h-[50px] rounded-lg sm:rounded-lg sm:rounded-xl font-medium justify-center"
             >
               Write to Us
               <Image
@@ -87,7 +87,7 @@ export default function Hero() {
 
         <Link
           href="#contact"
-          className="bg-[#00656D] hover:bg-[#31757a] text-[#F7F6F1] py-3 px-5 rounded-xl font-medium inline-flex items-center gap-2"
+          className="bg-[#00656D] hover:bg-[#31757a] text-[#F7F6F1] py-3 px-5 rounded-lg sm:rounded-lg sm:rounded-xl font-medium inline-flex items-center gap-2"
         >
           Write to Us
           <Image src="/images/arrow.png" width={20} height={20} alt="arrow" />

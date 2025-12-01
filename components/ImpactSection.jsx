@@ -129,16 +129,16 @@ export default function ImpactSection() {
           </div>
         </div>
 
-        <div className="relative w-full h-[340px] md:h-[560px] lg:h-[660px] rounded-2xl overflow-hidden shadow-lg mt-4 mb-8">
+        <div className="relative w-full h-[240px] md:h-[560px] lg:h-[660px] rounded-lg sm:rounded-2xl overflow-hidden shadow-lg mt-4 mb-8">
           <Image
             src={current.image}
             alt={current.title}
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/30" />
+          {/* <div className="absolute inset-0 bg-black/30" /> */}
 
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 z-50">
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 z-10">
             {points.map((_, idx) => (
               <button
                 key={idx}
@@ -147,9 +147,9 @@ export default function ImpactSection() {
                 aria-label={`Go to slide ${idx + 1}`}
               >
                 {activePoint === idx ? (
-                  <span className="w-3 h-3 rounded-full bg-[#00656D] block" />
+                  <span className="w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-[#00656D] block" />
                 ) : (
-                  <span className="w-3 h-3 rounded-full bg-[#F7F6F1] block" />
+                  <span className="w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-[#F7F6F1] block" />
                 )}
               </button>
             ))}

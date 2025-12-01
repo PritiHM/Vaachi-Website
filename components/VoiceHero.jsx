@@ -11,10 +11,10 @@ export default function VoiceHero() {
   return (
     <section className="section pb-0 md:pb:0 pt-3 w-full flex justify-center px-4 sm:px-0">
       <div className="w-full max-w-7xl mx-auto">
-        <div className="relative rounded-2xl overflow-hidden mt-[20px]">
+        <div className="relative overflow-hidden mt-[20px]">
 
           {/* Image Wrapper */}
-          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[650px] lg:h-[750px] overflow-hidden rounded-2xl">
+          <div className="relative w-full h-[200px] sm:h-[400px] md:h-[650px] lg:h-[750px] overflow-hidden rounded-lg sm:rounded-2xl">
             <Image
               src="/images/voice-bg.png"
               alt="Vaachi Foundation Performance"
@@ -26,7 +26,7 @@ export default function VoiceHero() {
           </div>
 
           {/* Content Box */}
-          <div className="mt-4 p-0 sm:p-6 md:mt-0 md:absolute md:bottom-16 md:left-10 md:max-w-[70%] z-30 text-left md:text-left text-[#291F1E] md:text-[#F7F6F1]">
+          <div className="mt-4 md:mt-0 md:absolute md:bottom-16 md:left-6 md:max-w-[70%] z-30 text-left md:text-left text-[#291F1E] md:text-[#F7F6F1]">
 
             {/* Mobile Heading */}
             <h2
